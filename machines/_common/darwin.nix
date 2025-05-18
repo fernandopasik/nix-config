@@ -27,6 +27,53 @@
 
   system = {
     defaults = {
+      CustomUserPreferences = {
+        "com.apple.ActivityMonitor" = {
+          IconType = 5;
+          OpenMainWindow = true;
+          ShowCategory = 101;
+          SortColumn = "CPUUsage";
+          SortDirection = 0;
+        };
+
+        "com.apple.BezelServices" = {
+          kDim = true;
+          kDimTime = 300;
+        };
+
+        "com.apple.dock" = {
+          dblclickbehavior = "maximize";
+          springboard-columns = 9;
+          springboard-rows = 5;
+        };
+
+        "com.apple.driver.AppleBluetoothMultitouch.trackpad" = {
+          Clicking = 1;
+        };
+
+        "com.apple.finder" = {
+          EmptyTrashSecurely = true;
+          WarnOnEmptyTrash = true;
+        };
+
+        "com.apple.ImageCapture" = {
+          disableHotPlug = true;
+        };
+
+        "com.apple.LaunchServices" = {
+          LSQuarantine = false;
+        };
+
+        "com.apple.menuextra.battery" = {
+          ShowPercent = "YES";
+          ShowTime = "YES";
+        };
+
+        "com.apple.TimeMachine" = {
+          DoNotOfferNewDisksForBackup = true;
+        };
+      };
+
       dock = {
         appswitcher-all-displays = true;
         autohide = true;

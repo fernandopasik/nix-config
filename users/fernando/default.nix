@@ -119,5 +119,7 @@ in
         "/System/Applications/Notes.app"
         "/Applications/Visual Studio Code.app"
       ];
+
+      defaults.dock.persistent-others = [ "/Users/${username}/Downloads" ];
     };
 }

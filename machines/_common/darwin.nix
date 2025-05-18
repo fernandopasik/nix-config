@@ -105,7 +105,6 @@
           "/System/Applications/Messages.app"
           "/Applications/WhatsApp.app"
         ];
-        persistent-others = [ "~/Downloads" ];
         scroll-to-open = false;
         show-process-indicators = true;
         show-recents = false;

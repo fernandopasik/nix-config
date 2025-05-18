@@ -1,6 +1,6 @@
-# PC Playbook
+# Nix Configuration
 
-Ansible playbook to setup your Mac or Linux computer for everyday tasks and software development
+Nix configuration to setup your Mac or Linux computer for everyday tasks and software development
 workflow.
 
 <!-- BADGES - START -->

@@ -1,5 +1,0 @@
----
-# One day
-package_cache_expiry: 86400
-is_linux: '{{ true if ansible_system == "Linux" else false }}'
-is_macos: '{{ true if ansible_distribution == "MacOSX" else false }}'

@@ -15,8 +15,3 @@ Thumbs.db
 
 # python
 .venv
-
-# ansible
-/.ansible
-/config.yml
-/inventory.ini

@@ -1,4 +1,4 @@
-verify: format lint lint-ansible check hooks
+verify: format lint check hooks
 
 venv:
 	@python -m venv .venv
@@ -7,7 +7,6 @@ venv:
 install:
 	pip install -r requirements-dev.txt
 	pre-commit install
-	ansible-galaxy install -r requirements.yml
 
 check:
 	nix flake check
@@ -21,15 +20,8 @@ lint:
 	yamllint .
 	nix shell nixpkgs#statix -c statix check
 
-lint-ansible:
-	ansible-lint
-	ansible-playbook --syntax-check main.yml
-
 hooks:
 	pre-commit run --all-files
-
-start:
-	ansible-playbook main.yml
 
 rebuild-nixos:
 	sudo nixos-rebuild switch --refresh --flake .#uac

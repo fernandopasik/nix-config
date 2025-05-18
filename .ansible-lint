@@ -1,9 +1,0 @@
----
-# .ansible-lint
-profile: production
-exclude_paths:
-  - .ansible
-  - .venv
-skip_list:
-  - latest[git]
-  - var-naming[no-role-prefix]

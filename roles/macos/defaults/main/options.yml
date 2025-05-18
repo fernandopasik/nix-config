@@ -1,40 +1,5 @@
 ---
 macos_screen_options:
-  # Top left screen corner → Put display to sleep
-  - domain: NSGlobalDomain
-    key: AppleFontSmoothing
-    type: int
-    value: 1
-  # Use a dark menu bar / dock
-  - domain: NSGlobalDomain
-    key: AppleInterfaceStyle
-    type: string
-    value: Dark
-  # Disable shadow in screenshots
-  - domain: com.apple.screencapture
-    key: disable-shadow
-    type: bool
-    value: true
-  # Save screenshots to Downloads
-  - domain: com.apple.screencapture
-    key: location
-    type: string
-    value: ~/Downloads
-  # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-  - domain: com.apple.screencapture
-    key: type
-    type: string
-    value: png
-  # Top left screen corner → Put display to sleep
-  - domain: com.apple.dock
-    key: wvous-tl-corner
-    type: int
-    value: 10
-  # Top left screen corner → Put display to sleep
-  - domain: com.apple.dock
-    key: wvous-tl-modifier
-    type: int
-    value: 0
 
 macos_activity_monitor_options:
   # Show the main window when launching Activity Monitor
@@ -59,16 +24,6 @@ macos_activity_monitor_options:
     value: 0
 
 macos_peripherals_options:
-  # Enable Trackpad tap to click
-  - domain: NSGlobalDomain
-    key: com.apple.mouse.tapBehavior
-    type: int
-    value: 1
-  # Enable feedback when changing volume
-  - domain: NSGlobalDomain
-    key: com.apple.sound.beep.feedback
-    type: bool
-    value: true
   # Enable Trackpad multitouch
   - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
     key: Clicking

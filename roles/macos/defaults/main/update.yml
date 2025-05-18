@@ -12,10 +12,6 @@ macos_software_update_options:
   - key: AutomaticDownload
     type: bool
     value: true
-  # Automatic install macOS updates
-  - key: AutomaticallyInstallMacOSUpdates
-    type: bool
-    value: true
   # Install system data files
   - key: ConfigDataInstall
     type: bool

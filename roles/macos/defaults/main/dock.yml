@@ -1,61 +1,14 @@
 ---
 macos_dock_items:
-  - System/Applications/Launchpad
-  - Applications/Google Chrome
   - System/Applications/Home
-  - System/Applications/Facetime
-  - System/Applications/Messages
-  - Applications/WhatsApp
   - Applications/Signal
   - System/Applications/Notes
-  - Applications/Hyper
   - Applications/Visual Studio Code
 
 macos_dock_options:
-  # Automatically hide and show the Dock
-  - key: autohide
-    type: bool
-    value: true
-  # Automatically hide and show the Dock delay time
-  - key: autohide-delay
-    type: float
-    value: 0
-  # Double-click a window's title bar to
   - key: dblclickbehavior
     type: string
     value: maximize
-  # Animate opening applications
-  - key: launchanim
-    type: bool
-    value: false
-  # Magnification
-  - key: magnification
-    type: bool
-    value: false
-  # Minimize windows using effect
-  - key: mineffect
-    type: string
-    value: scale
-  # Minimize windows into application icon
-  - key: minimize-to-application
-    type: bool
-    value: true
-  # Show indicators for open applications
-  - key: show-process-indicators
-    type: bool
-    value: true
-  # Show recent applications in Dock
-  - key: show-recents
-    type: bool
-    value: false
-  # Make Dock icons of hidden applications translucent
-  - key: showhidden
-    type: bool
-    value: true
-  # Dock item size
-  - key: tilesize
-    type: float
-    value: 60
   # LaunchPad columns
   - key: springboard-columns
     type: int

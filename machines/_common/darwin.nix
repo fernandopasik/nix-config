@@ -53,6 +53,7 @@
 
         "com.apple.finder" = {
           EmptyTrashSecurely = true;
+          _FXCalculateAllSizes = true;
           WarnOnEmptyTrash = true;
         };
 
@@ -67,6 +68,12 @@
         "com.apple.menuextra.battery" = {
           ShowPercent = "YES";
           ShowTime = "YES";
+        };
+
+        "com.apple.messageshelper.MessageController" = {
+          automaticEmojiSubstitutionEnablediMessage = false;
+          automaticQuoteSubstitutionEnabled = false;
+          continuousSpellCheckingEnabled = false;
         };
 
         "com.apple.TimeMachine" = {
@@ -130,7 +137,7 @@
         ShowMountedServersOnDesktop = false;
         ShowPathbar = false;
         ShowRemovableMediaOnDesktop = false;
-        ShowStatusBar = true;
+        ShowStatusBar = false;
       };
 
       menuExtraClock = {
@@ -167,6 +174,11 @@
         show-thumbnail = true;
         target = "file";
         type = "png";
+      };
+
+      screensaver = {
+        askForPassword = true;
+        askForPasswordDelay = 0;
       };
 
       SoftwareUpdate = {

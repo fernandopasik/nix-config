@@ -24,5 +24,3 @@
     - role: elliotweiser.osx-command-line-tools
       when: ansible_distribution == 'MacOSX'
     - package_manager
-    - role: macos
-      when: ansible_distribution == 'MacOSX'

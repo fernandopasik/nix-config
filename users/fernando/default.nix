@@ -109,4 +109,15 @@ in
         '';
       };
     };
+
+  system =
+    { }
+    // lib.optionalAttrs isDarwin {
+      defaults.dock.persistent-apps = [
+        "/Applications/Signal.app"
+        "/System/Applications/Home.app"
+        "/System/Applications/Notes.app"
+        "/Applications/Visual Studio Code.app"
+      ];
+    };
 }

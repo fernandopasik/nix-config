@@ -28,13 +28,13 @@
   system = {
     defaults = {
       controlcenter = {
-        AirDrop = 24;
+        AirDrop = false;
         BatteryShowPercentage = true;
-        Bluetooth = 24;
-        Display = 24;
-        FocusModes = 24;
-        NowPlaying = 24;
-        Sound = 24;
+        Bluetooth = false;
+        Display = false;
+        FocusModes = false;
+        NowPlaying = false;
+        Sound = false;
       };
 
       CustomUserPreferences = {
@@ -144,7 +144,7 @@
         ShowStatusBar = false;
       };
 
-      loginWindow = {
+      loginwindow = {
         DisableConsoleAccess = false;
         GuestEnabled = false;
         PowerOffDisabledWhileLoggedIn = false;

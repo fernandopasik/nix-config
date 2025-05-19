@@ -4,57 +4,10 @@
   config,
   ...
 }:
-let
-  inherit (pkgs.stdenv) isDarwin isLinux;
-
-  username = "fernando";
-  homeDir = if isDarwin then "/Users/${username}" else "/home/${username}";
-in
 {
-  users.users.${username} = lib.mkMerge [
-    {
-      shell = pkgs.zsh;
-      home = homeDir;
-    }
-    (lib.mkIf isLinux {
-      isNormalUser = true;
-      extraGroups = [
-        "docker"
-        "networkmanager"
-        "wheel"
-      ];
-    })
-  ];
-
-  security.sudo =
-    if isDarwin then
-      {
-        extraConfig = ''
-          Defaults:fernando !requiretty
-          fernando ALL=(ALL) NOPASSWD:SETENV: ALL
-        '';
-      }
-    else
-      {
-        extraRules = [
-          {
-            users = [ "fernando" ];
-            commands = [
-              {
-                command = "ALL";
-                options = [
-                  "NOPASSWD"
-                  "SETENV"
-                ];
-              }
-            ];
-          }
-        ];
-      };
-
   environment.systemPackages = with pkgs; [ git ];
 
-  home-manager.users.${username} =
+  home-manager.users.fernando =
     {
       pkgs,
       lib,
@@ -63,9 +16,8 @@ in
     }:
     {
       home = {
-        homeDirectory = homeDir;
         stateVersion = "25.05";
-        inherit username;
+        username = "fernando";
 
         packages = with pkgs; [ git ];
 
@@ -109,18 +61,5 @@ in
           ln -sf "$DOTFILES_DIR/.ghconfig.yml" "$HOME/.config/gh/config.yml"
         '';
       };
-    };
-
-  system =
-    { }
-    // lib.optionalAttrs isDarwin {
-      defaults.dock.persistent-apps = [
-        "/Applications/Signal.app"
-        "/System/Applications/Home.app"
-        "/System/Applications/Notes.app"
-        "/Applications/Visual Studio Code.app"
-      ];
-
-      defaults.dock.persistent-others = [ "/Users/${username}/Downloads" ];
     };
 }

@@ -37,6 +37,7 @@
         modules = [
           ./machines/uac
           ./users/fernando
+          ./users/fernando/linux.nix
         ];
       };
 
@@ -50,6 +51,7 @@
         modules = [
           ./machines/deimos
           ./users/fernando
+          ./users/fernando/darwin.nix
         ];
       };
     };

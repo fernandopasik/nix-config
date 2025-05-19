@@ -19,8 +19,9 @@ in
     (lib.mkIf isLinux {
       isNormalUser = true;
       extraGroups = [
-        "wheel"
         "docker"
+        "networkmanager"
+        "wheel"
       ];
     })
   ];

@@ -27,6 +27,16 @@
 
   system = {
     defaults = {
+      controlcenter = {
+        AirDrop = 24;
+        BatteryShowPercentage = true;
+        Bluetooth = 24;
+        Display = 24;
+        FocusModes = 24;
+        NowPlaying = 24;
+        Sound = 24;
+      };
+
       CustomUserPreferences = {
         "com.apple.ActivityMonitor" = {
           IconType = 5;
@@ -63,11 +73,6 @@
 
         "com.apple.LaunchServices" = {
           LSQuarantine = false;
-        };
-
-        "com.apple.menuextra.battery" = {
-          ShowPercent = "YES";
-          ShowTime = "YES";
         };
 
         "com.apple.messageshelper.MessageController" = {
@@ -137,6 +142,17 @@
         ShowPathbar = false;
         ShowRemovableMediaOnDesktop = false;
         ShowStatusBar = false;
+      };
+
+      loginWindow = {
+        DisableConsoleAccess = false;
+        GuestEnabled = false;
+        PowerOffDisabledWhileLoggedIn = false;
+        RestartDisabled = false;
+        RestartDisabledWhileLoggedIn = false;
+        SleepDisabled = false;
+        ShutDownDisabled = false;
+        ShutDownDisabledWhileLoggedIn = false;
       };
 
       menuExtraClock = {

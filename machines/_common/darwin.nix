@@ -104,7 +104,7 @@
         mru-spaces = false;
         orientation = "bottom";
         persistent-apps = [
-          "/System/Applications/Launchpad.app"
+          "/System/Applications/Apps.app"
           "/Applications/Google Chrome.app"
           "/System/Applications/Facetime.app"
           "/System/Applications/Messages.app"

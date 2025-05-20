@@ -20,5 +20,9 @@
     "gog-galaxy"
     "openemu@experimental"
     "steam"
+
+    # Others
+    "nordvpn"
+    "transmission"
   ];
 }

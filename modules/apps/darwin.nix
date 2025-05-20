@@ -18,7 +18,7 @@
     "battle-net"
     "epic-games"
     "gog-galaxy"
-    "openemu-experimental"
+    "openemu@experimental"
     "steam"
   ];
 }

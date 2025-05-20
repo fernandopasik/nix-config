@@ -26,6 +26,18 @@
   ];
 
   system = {
+    activationScripts.removeZoomBackgroundApp.text = ''
+      sudo launchctl bootout system /Library/LaunchDaemons/us.zoom.ZoomDaemon.plist 2>/dev/null
+      sudo launchctl bootout system /Library/LaunchAgents/us.zoom.updater.login.check.plist 2>/dev/null
+      sudo launchctl bootout system /Library/LaunchAgents/us.zoom.updater.plist 2>/dev/null
+
+      sudo rm -f /Library/LaunchDaemons/us.zoom.ZoomDaemon.plist
+      sudo rm -f /Library/LaunchAgents/us.zoom.updater.login.check.plist
+      sudo rm -f /Library/LaunchAgents/us.zoom.updater.plist
+
+      killall cfprefsd
+    '';
+
     defaults = {
       controlcenter = {
         AirDrop = false;

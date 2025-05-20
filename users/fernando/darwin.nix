@@ -6,8 +6,17 @@
 }:
 {
   home-manager.users.fernando =
-    { pkgs, config, ... }:
     {
+      pkgs,
+      lib,
+      config,
+      ...
+    }:
+    {
+      home.activation.unhideLibrary = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        /usr/bin/chflags nohidden ~/Library
+      '';
+
       home.homeDirectory = "/Users/fernando";
     };
 

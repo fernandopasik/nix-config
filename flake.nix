@@ -34,11 +34,7 @@
           homeManagerModule = home-manager.nixosModules.home-manager;
         };
 
-        modules = [
-          ./machines/uac
-          ./users/fernando
-          ./users/fernando/linux.nix
-        ];
+        modules = [ ./machines/uac ];
       };
 
       darwinConfigurations.Deimos = nix-darwin.lib.darwinSystem {
@@ -48,11 +44,7 @@
           homeManagerModule = home-manager.darwinModules.home-manager;
         };
 
-        modules = [
-          ./machines/deimos
-          ./users/fernando
-          ./users/fernando/darwin.nix
-        ];
+        modules = [ ./machines/deimos ];
       };
     };
 }

@@ -17,6 +17,8 @@ in
     ../../modules/dev-tools/darwin.nix
     ../../modules/docker/darwin.nix
     ../../modules/apps/darwin.nix
+    ../../users/fernando
+    ../../users/fernando/darwin.nix
   ];
 
   networking = {

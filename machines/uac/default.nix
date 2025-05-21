@@ -16,6 +16,8 @@
     ../../modules/dev-tools
     ../../modules/docker/linux.nix
     ../../modules/wsl
+    ../../users/fernando
+    ../../users/fernando/linux.nix
   ];
 
   networking.hostName = "uac";

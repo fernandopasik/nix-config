@@ -18,6 +18,7 @@
     "battle-net"
     "epic-games"
     "gog-galaxy"
+    "minecraft"
     "openemu@experimental"
     "steam"
 

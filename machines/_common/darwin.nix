@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   homebrew.enable = true;
@@ -26,17 +31,11 @@
   ];
 
   system = {
-    activationScripts.removeZoomBackgroundApp = lib.stringAfter [ "etc" ] ''
-      echo "🧹 Removing Zoom background services..."
-      launchctl bootout system /Library/LaunchDaemons/us.zoom.ZoomDaemon.plist 2>/dev/null
-      launchctl bootout system /Library/LaunchAgents/us.zoom.updater.login.check.plist 2>/dev/null
-      launchctl bootout system /Library/LaunchAgents/us.zoom.updater.plist 2>/dev/null
-
-      rm -f /Library/LaunchDaemons/us.zoom.ZoomDaemon.plist
-      rm -f /Library/LaunchAgents/us.zoom.updater.login.check.plist
-      rm -f /Library/LaunchAgents/us.zoom.updater.plist
-
-      /usr/bin/killall cfprefsd || true
+    activationScripts.postActivation.text = ''
+      echo "🧹 Removing background services..."
+      rm -f /Library/LaunchDaemons/us.zoom.*
+      rm -f /Library/LaunchAgents/us.zoom.*
+      rm -f /Library/LaunchAgents/com.gog.*
     '';
 
     defaults = {

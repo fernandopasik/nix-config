@@ -163,6 +163,7 @@
         RestartDisabled = false;
         RestartDisabledWhileLoggedIn = false;
         SleepDisabled = false;
+        SHOWOTHERUSERS_MANAGED = false;
         ShutDownDisabled = false;
         ShutDownDisabledWhileLoggedIn = false;
       };

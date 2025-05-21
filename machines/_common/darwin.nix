@@ -27,15 +27,16 @@
 
   system = {
     activationScripts.removeZoomBackgroundApp.text = ''
-      sudo launchctl bootout system /Library/LaunchDaemons/us.zoom.ZoomDaemon.plist 2>/dev/null
-      sudo launchctl bootout system /Library/LaunchAgents/us.zoom.updater.login.check.plist 2>/dev/null
-      sudo launchctl bootout system /Library/LaunchAgents/us.zoom.updater.plist 2>/dev/null
+      echo "🧹 Removing Zoom background services..."
+      launchctl bootout system /Library/LaunchDaemons/us.zoom.ZoomDaemon.plist 2>/dev/null
+      launchctl bootout system /Library/LaunchAgents/us.zoom.updater.login.check.plist 2>/dev/null
+      launchctl bootout system /Library/LaunchAgents/us.zoom.updater.plist 2>/dev/null
 
-      sudo rm -f /Library/LaunchDaemons/us.zoom.ZoomDaemon.plist
-      sudo rm -f /Library/LaunchAgents/us.zoom.updater.login.check.plist
-      sudo rm -f /Library/LaunchAgents/us.zoom.updater.plist
+      rm -f /Library/LaunchDaemons/us.zoom.ZoomDaemon.plist
+      rm -f /Library/LaunchAgents/us.zoom.updater.login.check.plist
+      rm -f /Library/LaunchAgents/us.zoom.updater.plist
 
-      killall cfprefsd
+      /usr/bin/killall cfprefsd || true
     '';
 
     defaults = {

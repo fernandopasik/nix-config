@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./languages
     ./nodejs
     ./python
     ./infrastructure

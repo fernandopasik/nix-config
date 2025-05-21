@@ -21,9 +21,22 @@
           SortDirection = 0;
         };
 
+        "com.apple.AdLib" = {
+          allowApplePersonalizedAdvertising = false;
+        };
+
         "com.apple.BezelServices" = {
           kDim = true;
           kDimTime = 300;
+        };
+
+        "com.apple.commerce" = {
+          AutoUpdate = true;
+        };
+
+        "com.apple.desktopservices" = {
+          DSDontWriteNetworkStores = true;
+          DSDontWriteUSBStores = true;
         };
 
         "com.apple.dock" = {
@@ -54,6 +67,18 @@
           automaticEmojiSubstitutionEnablediMessage = false;
           automaticQuoteSubstitutionEnabled = false;
           continuousSpellCheckingEnabled = false;
+        };
+
+        "com.apple.Safari" = {
+          UniversalSearchEnabled = false;
+          SuppressSearchSuggestions = true;
+        };
+
+        "com.apple.SoftwareUpdate" = {
+          AutomaticCheckEnabled = true;
+          ScheduleFrequency = 1;
+          AutomaticDownload = 1;
+          CriticalUpdateInstall = 1;
         };
 
         "com.apple.TimeMachine" = {

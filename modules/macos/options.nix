@@ -59,6 +59,8 @@
         "com.apple.TimeMachine" = {
           DoNotOfferNewDisksForBackup = true;
         };
+
+        system.defaults.loginwindow.SHOWOTHERUSERS_MANAGED = false;
       };
 
       dock = {
@@ -126,7 +128,6 @@
         RestartDisabled = false;
         RestartDisabledWhileLoggedIn = false;
         SleepDisabled = false;
-        SHOWOTHERUSERS_MANAGED = false;
         ShutDownDisabled = false;
         ShutDownDisabledWhileLoggedIn = false;
       };

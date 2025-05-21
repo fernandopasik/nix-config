@@ -15,6 +15,7 @@ in
     ../../modules/shell
     ../../modules/dev-tools
     ../../modules/dev-tools/darwin.nix
+    ../../modules/dev
     ../../modules/docker/darwin.nix
     ../../modules/apps/darwin.nix
     ../../modules/games/darwin.nix

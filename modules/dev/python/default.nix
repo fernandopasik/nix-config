@@ -1,0 +1,38 @@
+{ config, pkgs, ... }:
+
+{
+  environment.systemPackages = with pkgs; [
+    # Runtimes
+    python313
+
+    # Runtime Managers
+    pyenv
+    pipenv
+
+    # Package Managers
+    python313Packages.pip
+
+    # Packages
+    python313Packages.setuptools
+    python313Packages.virtualenv
+
+    # Required Libs
+    gcc
+    jq
+    libffi
+    gnumake
+    readline
+    sqlite
+    tk
+    yq
+  ];
+
+  environment.variables.PKG_CONFIG_PATH = pkgs.lib.makeSearchPath "lib/pkgconfig" [
+    pkgs.zlib.dev
+    pkgs.openssl.dev
+    pkgs.bzip2.dev
+    pkgs.libffi.dev
+    pkgs.readline.dev
+    pkgs.sqlite.dev
+  ];
+}

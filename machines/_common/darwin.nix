@@ -10,7 +10,6 @@
 
   homebrew.casks = [
     # Essentials
-    "1password"
     "google-chrome"
     "google-drive"
     "spotify"

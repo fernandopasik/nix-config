@@ -8,6 +8,7 @@
     # Others
     "1password"
     "nordvpn"
+    "tg-pro"
     "transmission"
   ];
 }

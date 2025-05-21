@@ -13,16 +13,5 @@
     ruby
     rustc
     jdk
-
-    # Infrastructure
-    dive
-    hadolint
-    kubectl
-    kubernetes-helm
-    minikube
-    qemu
   ];
-
-  nixpkgs.config.allowUnfreePredicate =
-    pkg: builtins.elem (builtins.parseDrvName pkg.name).name [ "terraform" ];
 }

@@ -4,5 +4,6 @@
   imports = [
     ./nodejs
     ./python
+    ./infrastructure
   ];
 }

@@ -11,16 +11,7 @@
     "vlc"
 
     # Chat
-    "discord"
     "signal"
-
-    # Games
-    "battle-net"
-    "epic-games"
-    "gog-galaxy"
-    "minecraft"
-    "openemu@experimental"
-    "steam"
 
     # Others
     "nordvpn"

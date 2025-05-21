@@ -10,6 +10,27 @@ workflow.
 
 <!-- BADGES - END -->
 
+## Install Nix
+
+### MacOS
+
+1. Install Nix
+
+```sh
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
+```
+
+2. Install Nix Darwin
+
+```sh
+sudo mkdir -p /etc/nix-darwin
+sudo chown $(id -nu):$(id -ng) /etc/nix-darwin
+cd /etc/nix-darwin
+nix flake init -t nix-darwin/master
+sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
+sudo nix run nix-darwin/master#darwin-rebuild -- switch
+```
+
 ## License
 
 MIT (c) 2023 [Fernando Pasik](https://fernandopasik.com)

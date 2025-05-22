@@ -7,11 +7,5 @@
     git-lfs
     gh
     act
-
-    # Programming languages
-    go
-    ruby
-    rustc
-    jdk
   ];
 }

@@ -1,5 +1,7 @@
 {
   pkgs,
+  isDarwin,
+  isLinux,
   lib,
   config,
   ...
@@ -18,6 +20,7 @@
       home = {
         stateVersion = "25.05";
         username = "fernando";
+        homeDirectory = if isDarwin then "/Users/fernando" else "/home/fernando";
 
         packages = with pkgs; [ git ];
 
@@ -42,24 +45,84 @@
           '';
         };
 
-        activation.cloneDotfiles = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-          export PATH=${pkgs.git}/bin:$PATH
-          DOTFILES_DIR="$HOME/repos/dotfiles"
-          if [ ! -d "$DOTFILES_DIR" ]; then
-            echo "🧰 Cloning dotfiles into $DOTFILES_DIR"
-            git clone https://github.com/fernandopasik/dotfiles.git "$DOTFILES_DIR"
-          else
-            echo "🧰 Updating dotfiles in $DOTFILES_DIR"
-            git -C "$DOTFILES_DIR" pull --rebase
-          fi
+        activation = lib.mkMerge [
+          {
+            cloneDotfiles = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+              export PATH=${pkgs.git}/bin:$PATH
+              DOTFILES_DIR="$HOME/repos/dotfiles"
+              if [ ! -d "$DOTFILES_DIR" ]; then
+                echo "🧰 Cloning dotfiles into $DOTFILES_DIR"
+                git clone https://github.com/fernandopasik/dotfiles.git "$DOTFILES_DIR"
+              else
+                echo "🧰 Updating dotfiles in $DOTFILES_DIR"
+                git -C "$DOTFILES_DIR" pull --rebase
+              fi
 
-          ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
-          ln -sf "$DOTFILES_DIR/.npmrc" "$HOME/.npmrc"
-          mkdir -p "$HOME/.config"
-          ln -sf "$DOTFILES_DIR/.starship.toml" "$HOME/.config/starship.toml"
-          mkdir -p "$HOME/.config/gh"
-          ln -sf "$DOTFILES_DIR/.ghconfig.yml" "$HOME/.config/gh/config.yml"
-        '';
+              ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+              ln -sf "$DOTFILES_DIR/.npmrc" "$HOME/.npmrc"
+              mkdir -p "$HOME/.config"
+              ln -sf "$DOTFILES_DIR/.starship.toml" "$HOME/.config/starship.toml"
+              mkdir -p "$HOME/.config/gh"
+              ln -sf "$DOTFILES_DIR/.ghconfig.yml" "$HOME/.config/gh/config.yml"
+            '';
+          }
+          (lib.optionalAttrs isDarwin {
+            unhideLibrary = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+              /usr/bin/chflags nohidden ~/Library
+            '';
+          })
+        ];
       };
     };
+
+  security.sudo = lib.mkMerge [
+    (lib.optionalAttrs isDarwin {
+      extraConfig = ''
+        Defaults:fernando !requiretty
+        fernando ALL=(ALL) NOPASSWD:SETENV: ALL
+      '';
+    })
+    (lib.optionalAttrs isLinux {
+      extraRules = [
+        {
+          users = [ "fernando" ];
+          commands = [
+            {
+              command = "ALL";
+              options = [
+                "NOPASSWD"
+                "SETENV"
+              ];
+            }
+          ];
+        }
+      ];
+    })
+  ];
+
+  system = lib.optionalAttrs isDarwin {
+    defaults.dock.persistent-apps = [
+      "/Applications/Signal.app"
+      "/System/Applications/Home.app"
+      "/System/Applications/Notes.app"
+      "/Applications/Visual Studio Code.app"
+    ];
+
+    defaults.dock.persistent-others = [ "/Users/fernando/Downloads" ];
+  };
+
+  users.users.fernando = lib.mkMerge [
+    {
+      shell = pkgs.zsh;
+      home = if isDarwin then "/Users/fernando" else "/home/fernando";
+    }
+    (lib.optionalAttrs isLinux {
+      isNormalUser = true;
+      extraGroups = [
+        "docker"
+        "networkmanager"
+        "wheel"
+      ];
+    })
+  ];
 }

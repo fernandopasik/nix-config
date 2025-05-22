@@ -19,7 +19,6 @@ in
     ../../modules/apps
     ../../modules/games
     ../../users/fernando
-    ../../users/fernando/darwin.nix
   ];
 
   networking = {

@@ -14,7 +14,7 @@
     ../_common/linux.nix
     ../../modules/shell
     ../../modules/dev
-    ../../modules/docker/linux.nix
+    ../../modules/docker
     ../../modules/wsl
     ../../users/fernando
     ../../users/fernando/linux.nix

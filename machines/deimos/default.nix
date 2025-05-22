@@ -15,7 +15,7 @@ in
     ../../modules/shell
     ../../modules/dev-tools
     ../../modules/dev
-    ../../modules/docker/darwin.nix
+    ../../modules/docker
     ../../modules/apps
     ../../modules/games
     ../../users/fernando

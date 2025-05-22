@@ -16,36 +16,36 @@ workflow.
 
 1. Install Nix
 
-```sh
-sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
-```
+   ```sh
+   sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
+   ```
 
 2. Install Nix Darwin
 
-```sh
-sudo mkdir -p /etc/nix-darwin
-sudo chown $(id -nu):$(id -ng) /etc/nix-darwin
-cd /etc/nix-darwin
-nix --extra-experimental-features 'nix-command flakes' flake init -t nix-darwin/master
-sudo scutil --set HostName "Deimos"
-sudo scutil --set LocalHostName "Deimos"
-sudo scutil --set ComputerName "Deimos"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Deimos"
-sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
-sudo nix --extra-experimental-features 'nix-command flakes' run nix-darwin/master#darwin-rebuild -- switch
-```
+   ```sh
+   sudo mkdir -p /etc/nix-darwin
+   sudo chown $(id -nu):$(id -ng) /etc/nix-darwin
+   cd /etc/nix-darwin
+   nix --extra-experimental-features 'nix-command flakes' flake init -t nix-darwin/master
+   sudo scutil --set HostName "Deimos"
+   sudo scutil --set LocalHostName "Deimos"
+   sudo scutil --set ComputerName "Deimos"
+   sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Deimos"
+   sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
+   sudo nix --extra-experimental-features 'nix-command flakes' run nix-darwin/master#darwin-rebuild -- switch
+   ```
 
 3. Install HomeBrew
 
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+   ```sh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
 
 4. Run flake
 
-```sh
-sudo darwin-rebuild switch --refresh --flake github:fernandopasik/nix-config#Deimos
-```
+   ```sh
+   sudo darwin-rebuild switch --refresh --flake github:fernandopasik/nix-config#Deimos
+   ```
 
 ## License
 

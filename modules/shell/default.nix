@@ -1,12 +1,11 @@
 {
   config,
+  isDarwin,
+  isLinux,
   lib,
   pkgs,
   ...
 }:
-let
-  inherit (pkgs.stdenv) isDarwin isLinux;
-in
 {
   environment.systemPackages = with pkgs; [
     zsh

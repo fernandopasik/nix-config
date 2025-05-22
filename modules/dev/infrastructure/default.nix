@@ -16,5 +16,5 @@
   ];
 
   nixpkgs.config.allowUnfreePredicate =
-    pkg: builtins.elem (builtins.parseDrvName pkg.name).name [ "terraform" ];
+    pkg: builtins.elem (pkg.pname or (pkg.meta.name or "")) [ "terraform" ];
 }

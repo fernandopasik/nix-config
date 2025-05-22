@@ -35,11 +35,16 @@ sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
 sudo nix --extra-experimental-features 'nix-command flakes' run nix-darwin/master#darwin-rebuild -- switch
 ```
 
-3. Run flake
+3. Install HomeBrew
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+4. Run flake
 
 ```sh
 sudo darwin-rebuild switch --refresh --flake github:fernandopasik/nix-config#Deimos
-
 ```
 
 ## License

@@ -11,8 +11,8 @@
     corepack_24
 
     # Packages
-    nodePackages.npm
-    nodePackages.npm-check-updates
-    nodePackages.yo
+    nodePackages_latest.npm
+    nodePackages_latest.npm-check-updates
+    nodePackages_latest.yo
   ];
 }

@@ -8,5 +8,6 @@
     ./nodejs
     ./python
     ./infrastructure
+    ./browsers
   ];
 }

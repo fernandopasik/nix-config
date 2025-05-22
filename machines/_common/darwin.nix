@@ -32,6 +32,14 @@
     "webpquicklook"
   ];
 
+  nix.gc = {
+    automatic = true;
+    interval = {
+      Weekday = 0;
+    };
+    options = "--delete-older-than 5";
+  };
+
   system = {
     activationScripts.postActivation.text = ''
       echo "🧹 Removing background services..."

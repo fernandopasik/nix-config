@@ -13,11 +13,11 @@ in
     ../_common
     ../_common/darwin.nix
     ../../modules/shell
-    ../../modules/dev-tools/darwin.nix
+    ../../modules/dev-tools
     ../../modules/dev
     ../../modules/docker/darwin.nix
-    ../../modules/apps/darwin.nix
-    ../../modules/games/darwin.nix
+    ../../modules/apps
+    ../../modules/games
     ../../users/fernando
     ../../users/fernando/darwin.nix
   ];

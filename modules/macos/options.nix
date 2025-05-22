@@ -129,7 +129,7 @@
         CreateDesktop = true;
         FXDefaultSearchScope = "SCcf";
         FXEnableExtensionChangeWarning = false;
-        FXPreferredViewStyle = "clmv";
+        FXPreferredViewStyle = "Nlsv";
         FXRemoveOldTrashItems = false;
         NewWindowTarget = "Home";
         QuitMenuItem = true;

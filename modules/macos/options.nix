@@ -69,11 +69,6 @@
           continuousSpellCheckingEnabled = false;
         };
 
-        "com.apple.Safari" = {
-          UniversalSearchEnabled = false;
-          SuppressSearchSuggestions = true;
-        };
-
         "com.apple.SoftwareUpdate" = {
           AutomaticCheckEnabled = true;
           ScheduleFrequency = 1;

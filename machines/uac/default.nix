@@ -13,7 +13,6 @@
     ../_common
     ../_common/linux.nix
     ../../modules/shell
-    ../../modules/dev-tools
     ../../modules/dev
     ../../modules/docker/linux.nix
     ../../modules/wsl

@@ -2,10 +2,10 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # git and github
-    git
-    git-lfs
+    # cli
     gh
+
+    # github actions
     act
   ];
 }

@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./git
+    ./github
     ./languages
     ./nodejs
     ./python

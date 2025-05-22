@@ -30,6 +30,10 @@
           kDimTime = 300;
         };
 
+        "com.apple.bird" = {
+          optimize-storage = false;
+        };
+
         "com.apple.commerce" = {
           AutoUpdate = true;
         };
@@ -52,6 +56,9 @@
         "com.apple.finder" = {
           EmptyTrashSecurely = true;
           _FXCalculateAllSizes = true;
+          FXICloudDriveDesktop = true;
+          FXICloudDriveDocuments = true;
+          FXICloudDriveEnabled = true;
           WarnOnEmptyTrash = true;
         };
 

@@ -30,6 +30,8 @@
         system = "x86_64-linux";
 
         specialArgs = {
+          isDarwin = false;
+          isLinux = true;
           wslModule = nixos-wsl.nixosModules.wsl;
           homeManagerModule = home-manager.nixosModules.home-manager;
         };
@@ -41,6 +43,8 @@
         system = "x86_64-darwin";
 
         specialArgs = {
+          isDarwin = true;
+          isLinux = false;
           homeManagerModule = home-manager.darwinModules.home-manager;
         };
 

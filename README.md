@@ -26,9 +26,20 @@ sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
 sudo mkdir -p /etc/nix-darwin
 sudo chown $(id -nu):$(id -ng) /etc/nix-darwin
 cd /etc/nix-darwin
-nix flake init -t nix-darwin/master
+nix --extra-experimental-features 'nix-command flakes' flake init -t nix-darwin/master
+sudo scutil --set HostName "Deimos"
+sudo scutil --set LocalHostName "Deimos"
+sudo scutil --set ComputerName "Deimos"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Deimos"
 sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
-sudo nix run nix-darwin/master#darwin-rebuild -- switch
+sudo nix --extra-experimental-features 'nix-command flakes' run nix-darwin/master#darwin-rebuild -- switch
+```
+
+3. Run flake
+
+```sh
+sudo darwin-rebuild switch --refresh --flake github:fernandopasik/nix-config#Deimos
+
 ```
 
 ## License

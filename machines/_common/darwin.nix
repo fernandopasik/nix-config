@@ -32,7 +32,5 @@
     '';
 
     primaryUser = "fernando";
-
-    stateVersion = 6;
   };
 }

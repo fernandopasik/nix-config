@@ -50,4 +50,6 @@
       "flakes"
     ];
   };
+
+  system.stateVersion = if isDarwin then 6 else "25.05";
 }

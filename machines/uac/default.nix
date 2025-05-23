@@ -11,7 +11,6 @@
     wslModule
     homeManagerModule
     ../../modules/nix
-    ../_common
     ../_common/linux.nix
     ../../modules/shell
     ../../modules/dev

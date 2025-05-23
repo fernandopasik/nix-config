@@ -20,11 +20,9 @@ lib.mkMerge [
       "steam"
     ];
 
-    system = {
-      activationScripts.postActivation.text = ''
-        echo "🧹 Removing GOG background service..."
-        rm -f /Library/LaunchAgents/com.gog.*
-      '';
-    };
+    system.activationScripts.postActivation.text = ''
+      echo "🧹 Removing GOG background service..."
+      rm -f /Library/LaunchAgents/com.gog.*
+    '';
   })
 ]

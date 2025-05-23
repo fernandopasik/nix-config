@@ -6,7 +6,7 @@
 }:
 
 {
-  imports = [ ../../modules/macos/options.nix ];
+  imports = [ ../../modules/macos ];
 
   homebrew.enable = true;
 
@@ -22,14 +22,6 @@
     # Chat
     "whatsapp"
     "zoom"
-
-    # QuickLook plugins
-    "qlcolorcode"
-    "qlmarkdown"
-    "qlstephen"
-    "quicklook-csv"
-    "quicklook-json"
-    "webpquicklook"
   ];
 
   nix.gc = {

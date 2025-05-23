@@ -53,15 +53,6 @@
           Clicking = 1;
         };
 
-        "com.apple.finder" = {
-          EmptyTrashSecurely = true;
-          _FXCalculateAllSizes = true;
-          FXICloudDriveDesktop = true;
-          FXICloudDriveDocuments = true;
-          FXICloudDriveEnabled = true;
-          WarnOnEmptyTrash = true;
-        };
-
         "com.apple.ImageCapture" = {
           disableHotPlug = true;
         };
@@ -125,27 +116,6 @@
         wvous-br-corner = 1;
         wvous-tl-corner = 10;
         wvous-tr-corner = 1;
-      };
-
-      finder = {
-        _FXShowPosixPathInTitle = false;
-        _FXSortFoldersFirst = true;
-        _FXSortFoldersFirstOnDesktop = true;
-        AppleShowAllExtensions = false;
-        AppleShowAllFiles = false;
-        CreateDesktop = true;
-        FXDefaultSearchScope = "SCcf";
-        FXEnableExtensionChangeWarning = false;
-        FXPreferredViewStyle = "Nlsv";
-        FXRemoveOldTrashItems = false;
-        NewWindowTarget = "Home";
-        QuitMenuItem = true;
-        ShowExternalHardDrivesOnDesktop = false;
-        ShowHardDrivesOnDesktop = false;
-        ShowMountedServersOnDesktop = false;
-        ShowPathbar = false;
-        ShowRemovableMediaOnDesktop = false;
-        ShowStatusBar = false;
       };
 
       loginwindow = {

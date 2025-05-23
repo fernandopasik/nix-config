@@ -28,9 +28,6 @@
           "repos/.keep".text = "";
           ".zshrc".text = ''
             . ~/repos/dotfiles/utils.sh
-
-            export STARSHIP_CONFIG=~/.config/starship.toml
-            eval "$(starship init zsh)"
           '';
           ".gitconfig.local".text = ''
             [user]

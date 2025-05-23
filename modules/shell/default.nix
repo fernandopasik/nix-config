@@ -38,6 +38,11 @@
         bindkey '^[OB' history-substring-search-down
         bindkey '^[[B' history-substring-search-down
       '';
+
+      promptInit = ''
+        export STARSHIP_CONFIG=$HOME/.config/starship.toml
+        eval "$(starship init zsh)"
+      '';
     }
     (lib.optionalAttrs isLinux {
       autosuggestions.enable = true;

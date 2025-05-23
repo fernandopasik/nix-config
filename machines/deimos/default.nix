@@ -14,7 +14,6 @@ in
     ../_common/darwin.nix
     ../../modules/shell
     ../../modules/dev
-    ../../modules/docker
     ../../modules/apps
     ../../modules/games
     ../../users/fernando

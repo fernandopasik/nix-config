@@ -74,6 +74,7 @@
       '';
     })
     (lib.optionalAttrs isLinux {
+      enable = true;
       extraRules = [
         {
           users = [ "fernando" ];

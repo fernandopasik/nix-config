@@ -12,7 +12,6 @@
     homeManagerModule
     ../../modules/nix
     ../../modules/system
-    ../_common/linux.nix
     ../../modules/shell
     ../../modules/dev
     ../../modules/wsl

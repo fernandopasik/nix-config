@@ -4,5 +4,6 @@
   imports = [
     ./options
     ./finder
+    ./dock
   ];
 }

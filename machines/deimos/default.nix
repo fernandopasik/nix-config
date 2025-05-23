@@ -12,7 +12,6 @@ in
     homeManagerModule
     ../../modules/nix
     ../../modules/system
-    ../_common/darwin.nix
     ../../modules/shell
     ../../modules/dev
     ../../modules/apps

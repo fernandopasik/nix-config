@@ -5,5 +5,8 @@
     ./options
     ./finder
     ./dock
+    ./apps
   ];
+
+  homebrew.enable = true;
 }

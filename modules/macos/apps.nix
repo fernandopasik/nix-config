@@ -1,15 +1,5 @@
+{ config, pkgs, ... }:
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
-  imports = [ ../../modules/macos ];
-
-  homebrew.enable = true;
-
   homebrew.casks = [
     # Essentials
     "google-chrome"

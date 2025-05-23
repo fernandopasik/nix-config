@@ -19,5 +19,12 @@ lib.mkMerge [
       "openemu@experimental"
       "steam"
     ];
+
+    system = {
+      activationScripts.postActivation.text = ''
+        echo "🧹 Removing GOG background service..."
+        rm -f /Library/LaunchAgents/com.gog.*
+      '';
+    };
   })
 ]

@@ -45,7 +45,6 @@
       echo "🧹 Removing background services..."
       rm -f /Library/LaunchDaemons/us.zoom.*
       rm -f /Library/LaunchAgents/us.zoom.*
-      rm -f /Library/LaunchAgents/com.gog.*
     '';
 
     primaryUser = "fernando";

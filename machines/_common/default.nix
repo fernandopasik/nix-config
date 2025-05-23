@@ -1,6 +1,8 @@
 {
   config,
   lib,
+  isDarwin,
+  isLinux,
   pkgs,
   ...
 }:
@@ -29,8 +31,23 @@
     zlib
   ];
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix = {
+    gc = lib.mkMerge [
+      {
+        automatic = true;
+        options = "--delete-older-than 5";
+      }
+      (lib.optionalAttrs isDarwin {
+        interval = {
+          Weekday = 0;
+        };
+      })
+      (lib.optionalAttrs isLinux { dates = "weekly"; })
+    ];
+
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
 }

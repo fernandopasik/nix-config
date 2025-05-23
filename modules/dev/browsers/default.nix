@@ -18,6 +18,10 @@ lib.mkMerge [
     environment.systemPackages = with pkgs; [ firefox ];
 
     nixpkgs.config.allowUnfreePredicate =
-      pkg: builtins.elem (pkg.pname or (pkg.meta.name or "")) [ "microsoft-edge" ];
+      pkg:
+      builtins.elem (pkg.pname or (pkg.meta.name or "")) [
+        "google-chrome"
+        "microsoft-edge"
+      ];
   })
 ]

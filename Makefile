@@ -18,6 +18,7 @@ format:
 
 lint:
 	yamllint .
+	pymarkdown fix .
 	nix shell nixpkgs#statix -c statix check
 
 hooks:

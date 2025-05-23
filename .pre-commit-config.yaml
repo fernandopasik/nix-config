@@ -32,6 +32,12 @@ repos:
         entry: mdformat
         language: system
         types: [markdown]
+      - id: pymarkdown
+        name: pymarkdown
+        args: [scan]
+        entry: pymarkdown
+        language: system
+        types: [markdown]
       - id: nix-flake-check
         name: Nix Flake Check
         entry: nix flake check
@@ -43,7 +49,6 @@ repos:
           nix shell nixpkgs#nixfmt-rfc-style -c sh -c 'find . -name "*.nix" -exec nixfmt --strict --check {} +'
         language: system
         files: \.nix$
-
       - id: statix
         name: Nix Lint
         entry: nix shell nixpkgs#statix -c statix check

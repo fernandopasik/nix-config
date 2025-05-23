@@ -9,5 +9,6 @@
     ./python
     ./infrastructure
     ./browsers
+    ./tools
   ];
 }

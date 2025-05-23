@@ -13,7 +13,6 @@ in
     ../_common
     ../_common/darwin.nix
     ../../modules/shell
-    ../../modules/dev-tools
     ../../modules/dev
     ../../modules/docker
     ../../modules/apps

@@ -11,6 +11,7 @@ in
   imports = [
     homeManagerModule
     ../../modules/nix
+    ../../modules/system
     ../_common/darwin.nix
     ../../modules/shell
     ../../modules/dev

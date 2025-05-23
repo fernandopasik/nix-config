@@ -10,6 +10,7 @@ in
 {
   imports = [
     homeManagerModule
+    ../../modules/nix
     ../_common
     ../_common/darwin.nix
     ../../modules/shell

@@ -30,7 +30,5 @@
       rm -f /Library/LaunchDaemons/us.zoom.*
       rm -f /Library/LaunchAgents/us.zoom.*
     '';
-
-    primaryUser = "fernando";
   };
 }

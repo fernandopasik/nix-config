@@ -33,5 +33,7 @@ in
         ServerDescription = hostname;
       };
     };
+
+    primaryUser = "fernando";
   };
 }

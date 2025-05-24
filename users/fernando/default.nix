@@ -6,6 +6,13 @@
   config,
   ...
 }:
+let
+  gitconfigLocalContent = ''
+    [user]
+      name = Fernando Pasik
+      email = fernando@pasik.com.ar
+  '';
+in
 {
   environment.systemPackages = with pkgs; [ git ];
 
@@ -29,11 +36,6 @@
           ".zshrc".text = ''
             . ~/repos/dotfiles/utils.sh
           '';
-          ".gitconfig.local".text = ''
-            [user]
-              name = Fernando Pasik
-              email = fernando@pasik.com.ar
-          '';
         };
 
         activation = lib.mkMerge [
@@ -47,6 +49,11 @@
               else
                 echo "🧰 Updating dotfiles in $DOTFILES_DIR"
                 git -C "$DOTFILES_DIR" pull --rebase
+              fi
+
+              if [ ! -f "$HOME/.gitconfig.local" ]; then
+                echo "🔀 Creating .gitconfig.local"
+                echo -e "${gitconfigLocalContent}" > "$HOME/.gitconfig.local"
               fi
 
               ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"

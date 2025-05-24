@@ -6,6 +6,7 @@
   ];
 
   programs.zsh.promptInit = ''
+    export PATH="${pkgs.rbenv}/bin:$PATH"
     eval "$(rbenv init -)"
   '';
 }

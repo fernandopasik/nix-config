@@ -21,6 +21,7 @@ lib.mkMerge [
 
         # Chat
         "slack"
+        "notion"
       ];
 
       masApps = {

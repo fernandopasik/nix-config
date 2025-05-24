@@ -11,11 +11,11 @@ in
   imports = [
     homeManagerModule
     ../../modules/nix
+    ../../modules/macos
     ../../modules/system
     ../../modules/shell
     ../../modules/dev
-    ../../modules/apps
-    ../../modules/apps/more-apps.nix
+    ../../modules/macos/more-apps.nix
     ../../modules/games
     ../../users/fernando
   ];

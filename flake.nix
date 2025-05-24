@@ -50,5 +50,17 @@
 
         modules = [ ./machines/deimos ];
       };
+
+      darwinConfigurations.Work = nix-darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+
+        specialArgs = {
+          isDarwin = true;
+          isLinux = false;
+          homeManagerModule = home-manager.darwinModules.home-manager;
+        };
+
+        modules = [ ./machines/work ];
+      };
     };
 }

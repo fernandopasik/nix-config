@@ -2,10 +2,10 @@
 
 {
   imports = [
-    ./options
-    ./finder
-    ./dock
-    ./apps
+    ./options.nix
+    ./finder.nix
+    ./dock.nix
+    ./apps.nix
   ];
 
   homebrew.enable = true;

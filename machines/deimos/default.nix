@@ -15,6 +15,7 @@ in
     ../../modules/shell
     ../../modules/dev
     ../../modules/apps
+    ../../modules/apps/more-apps.nix
     ../../modules/games
     ../../users/fernando
   ];

@@ -2,9 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # Ruby
+    rbenv
+    ruby
+
     # Other Programming languages
     go
-    ruby
     rustc
     jdk
   ];

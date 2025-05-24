@@ -16,11 +16,11 @@
   ];
 
   programs.zsh.promptInit = ''
-    export PATH="${pkgs.rbenv}/bin:$PATH"
+    export PATH="$(gem env gemdir)/bin:${pkgs.rbenv}/bin:$PATH"
     if [[ ! -d "$(rbenv root)/plugins/ruby-build" ]]; then
       git clone --quiet https://github.com/rbenv/ruby-build.git "$(rbenv root)/plugins/ruby-build"
     fi
-    export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=${pkgs.libyaml} --with-openssl-dir=${pkgs.openssl}"
+    export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=${pkgs.libyaml} --with-openssl-dir=${pkgs.openssl.out}"
     eval "$(rbenv init -)"
   '';
 }

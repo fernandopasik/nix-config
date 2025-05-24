@@ -3,6 +3,16 @@
   environment.systemPackages = with pkgs; [
     rbenv
     ruby
+
+    # Required Libs
+    autoconf
+    bison
+    gcc
+    libyaml
+    openssl
+    pkg-config
+    readline
+    zlib
   ];
 
   programs.zsh.promptInit = ''

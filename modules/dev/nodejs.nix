@@ -9,6 +9,7 @@
 
     # Package Managers
     corepack_24
+    volta
 
     # Packages
     nodePackages_latest.npm

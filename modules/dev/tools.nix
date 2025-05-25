@@ -12,9 +12,6 @@ lib.mkMerge [
         # IDE
         "visual-studio-code"
         "ghostty"
-        "android-commandlinetools"
-        "android-platform-tools"
-        "android-studio"
 
         # Fonts
         "font-jetbrains-mono"

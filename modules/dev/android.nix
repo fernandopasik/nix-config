@@ -43,12 +43,12 @@ lib.mkMerge (
     {
       environment = {
         systemPackages = [ androidSdkPkg ];
-        pathsToLink = [ "/libexec/android-sdk" ];
+        pathsToLink = [ "/share/android-sdk" ];
       };
 
       programs.zsh.promptInit = ''
-        export ANDROID_HOME="${androidSdkPkg}"
-        export ANDROID_SDK_ROOT="${androidSdkPkg}"
+        export ANDROID_HOME="${androidSdkPkg}/share/android-sdk"
+        export ANDROID_SDK_ROOT="${androidSdkPkg}/share/android-sdk"
       '';
     }
 

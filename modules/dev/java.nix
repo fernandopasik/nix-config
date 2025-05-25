@@ -9,14 +9,10 @@
 lib.mkMerge [
   {
     environment.systemPackages = with pkgs; [
-      jdk17
-      jdk21
       jdk24
+      jdk21
+      jdk17
     ];
-
-    programs.zsh.promptInit = ''
-      export JAVA_HOME="${pkgs.jdk24}/lib/openjdk"
-    '';
   }
   (lib.optionalAttrs isDarwin {
     homebrew = {
@@ -24,9 +20,16 @@ lib.mkMerge [
     };
 
     programs.zsh.promptInit = ''
+      export JAVA_HOME="${pkgs.jdk24}/lib/openjdk"
       export PATH="$HOME/.jenv/bin:$PATH"
       eval "$(jenv init -)"
     '';
   })
-  (lib.optionalAttrs isLinux { programs.java.enable = true; })
+  (lib.optionalAttrs isLinux {
+    programs.java.enable = true;
+
+    programs.zsh.promptInit = ''
+      export JAVA_HOME="${pkgs.jdk24}/lib/openjdk"
+    '';
+  })
 ]

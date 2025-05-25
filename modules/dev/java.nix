@@ -1,6 +1,7 @@
 {
   config,
   isDarwin,
+  isLinux,
   lib,
   pkgs,
   ...
@@ -12,8 +13,6 @@ lib.mkMerge [
       jdk21
       jdk24
     ];
-
-    programs.java.enable = true;
 
     programs.zsh.promptInit = ''
       export JAVA_HOME="${pkgs.jdk24}/lib/openjdk"
@@ -29,4 +28,5 @@ lib.mkMerge [
       eval "$(jenv init -)"
     '';
   })
+  (lib.optionalAttrs isLinux { programs.java.enable = true; })
 ]

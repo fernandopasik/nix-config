@@ -20,9 +20,9 @@
     if [[ ! -d "$(rbenv root)/plugins/ruby-build" ]]; then
       git clone --quiet https://github.com/rbenv/ruby-build.git "$(rbenv root)/plugins/ruby-build"
     fi
-    export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=${pkgs.libyaml.dev} --with-openssl-dir=${pkgs.openssl.out}"
-    export CPPFLAGS="-I${pkgs.openssl.dev}/include"
-    export LDFLAGS="-I${pkgs.openssl.out}/lib"
+    export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=${pkgs.libyaml.out} --with-openssl-dir=${pkgs.openssl.out}"
+    export CPPFLAGS="-I${pkgs.openssl.dev}/include -I${pkgs.libyaml.dev}/include"
+    export LDFLAGS="-I${pkgs.openssl.out}/lib -I${pkgs.libyaml.out}/lib"
     eval "$(rbenv init -)"
   '';
 }

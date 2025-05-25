@@ -43,14 +43,13 @@ lib.mkMerge (
     {
       environment = {
         systemPackages = [ androidSdkPkg ];
-
-        variables = {
-          ANDROID_HOME = "${androidSdkPkg}/libexec/android-sdk";
-          ANDROID_SDK_ROOT = "${androidSdkPkg}/libexec/android-sdk";
-        };
-
         pathsToLink = [ "/libexec/android-sdk" ];
       };
+
+      programs.zsh.promptInit = ''
+        export ANDROID_HOME = "${androidSdkPkg}/libexec/android-sdk";
+        export ANDROID_SDK_ROOT = "${androidSdkPkg}/libexec/android-sdk";
+      '';
     }
 
     (lib.optionalAttrs isDarwin {

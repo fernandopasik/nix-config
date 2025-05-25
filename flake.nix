@@ -15,6 +15,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    android-nixpkgs = {
+      url = "github:tadfisher/android-nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -24,6 +28,7 @@
       nix-darwin,
       nixos-wsl,
       nixpkgs,
+      android-nixpkgs,
     }:
     {
       nixosConfigurations.uac = nixpkgs.lib.nixosSystem {
@@ -34,6 +39,7 @@
           isLinux = true;
           wslModule = nixos-wsl.nixosModules.wsl;
           homeManagerModule = home-manager.nixosModules.home-manager;
+          androidModule = android-nixpkgs;
         };
 
         modules = [ ./machines/uac ];
@@ -46,6 +52,7 @@
           isDarwin = true;
           isLinux = false;
           homeManagerModule = home-manager.darwinModules.home-manager;
+          androidModule = android-nixpkgs;
         };
 
         modules = [ ./machines/deimos ];
@@ -58,6 +65,7 @@
           isDarwin = true;
           isLinux = false;
           homeManagerModule = home-manager.darwinModules.home-manager;
+          androidModule = android-nixpkgs;
         };
 
         modules = [ ./machines/work ];

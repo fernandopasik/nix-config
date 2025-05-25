@@ -4,10 +4,11 @@
   imports = [
     ./git.nix
     ./github.nix
-    ./languages.nix
     ./nodejs.nix
     ./python.nix
     ./ruby.nix
+    ./java.nix
+    ./languages.nix
     ./docker.nix
     ./infrastructure.nix
     ./browsers.nix

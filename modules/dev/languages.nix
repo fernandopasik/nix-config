@@ -5,6 +5,5 @@
     # Other Programming languages
     go
     rustc
-    jdk
   ];
 }

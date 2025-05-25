@@ -56,11 +56,7 @@ lib.mkMerge (
 
     (lib.optionalAttrs isDarwin {
       homebrew = {
-        casks = [
-          "android-commandlinetools"
-          "android-platform-tools"
-          "android-studio"
-        ];
+        casks = [ "android-studio" ];
       };
     })
   ]

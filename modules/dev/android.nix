@@ -24,6 +24,7 @@ lib.mkMerge (
         ndk-26-1-10909125
 
         # Build tools
+        build-tools-34-0-0
         build-tools-35-0-0
         build-tools-36-0-0
 

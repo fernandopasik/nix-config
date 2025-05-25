@@ -11,7 +11,9 @@ lib.mkMerge [
   {
     environment.systemPackages = [
       (androidModule.sdk.${pkgs.system} (
-        sdkPkgs: with sdkPkgs; [
+        sdkPkgs:
+        with sdkPkgs;
+        [
           cmdline-tools-latest
           platform-tools
           emulator
@@ -24,6 +26,13 @@ lib.mkMerge [
           build-tools-35-0-0
           build-tools-36-0-0
 
+        ]
+        ++ lib.optionals (pkgs.system == "aarch64-darwin") [
+          # System images (emulators)
+          system-images-android-35-google-apis-arm64-v8a
+          system-images-android-36-google-apis-arm64-v8a
+        ]
+        ++ lib.optionals (pkgs.system == "x86_64-linux" || pkgs.system == "x86_64-darwin") [
           # System images (emulators)
           system-images-android-35-google-apis-x86-64
           system-images-android-36-google-apis-x86-64

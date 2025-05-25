@@ -47,8 +47,8 @@ lib.mkMerge (
       };
 
       programs.zsh.promptInit = ''
-        export ANDROID_HOME="${androidSdkPkg}/libexec/android-sdk"
-        export ANDROID_SDK_ROOT="${androidSdkPkg}/libexec/android-sdk"
+        export ANDROID_HOME="${androidSdkPkg}"
+        export ANDROID_SDK_ROOT="${androidSdkPkg}"
       '';
     }
 

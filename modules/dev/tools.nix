@@ -6,6 +6,7 @@
   ...
 }:
 lib.mkMerge [
+  { environment.systemPackages = with pkgs; [ watchman ]; }
   (lib.optionalAttrs isDarwin {
     homebrew = {
       casks = [

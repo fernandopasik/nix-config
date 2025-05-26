@@ -37,6 +37,7 @@
         specialArgs = {
           isDarwin = false;
           isLinux = true;
+          isWSL = true;
           wslModule = nixos-wsl.nixosModules.wsl;
           homeManagerModule = home-manager.nixosModules.home-manager;
           androidModule = android-nixpkgs;
@@ -51,6 +52,7 @@
         specialArgs = {
           isDarwin = true;
           isLinux = false;
+          isWSL = false;
           homeManagerModule = home-manager.darwinModules.home-manager;
           androidModule = android-nixpkgs;
         };
@@ -64,6 +66,7 @@
         specialArgs = {
           isDarwin = true;
           isLinux = false;
+          isWSL = false;
           homeManagerModule = home-manager.darwinModules.home-manager;
           androidModule = android-nixpkgs;
         };

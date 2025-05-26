@@ -9,4 +9,8 @@
   ];
 
   homebrew.enable = true;
+
+  programs.zsh.promptInit = ''
+    export PATH="/opt/homebrew/bin:$PATH"
+  '';
 }

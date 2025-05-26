@@ -23,6 +23,7 @@ lib.mkMerge (
         platforms-android-36
         ndk-26-1-10909125
         ndk-27-0-12077973
+        ndk-27-1-12297006
 
         # Build tools
         build-tools-34-0-0

@@ -21,7 +21,6 @@ lib.mkMerge [
 
     programs.zsh.promptInit = ''
       export JAVA_HOME="${pkgs.jdk24}/lib/openjdk"
-      export PATH="/opt/homebrew/bin:$PATH"
       export PATH="$HOME/.jenv/bin:$PATH"
       eval "$(jenv init -)"
     '';

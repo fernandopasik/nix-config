@@ -23,6 +23,12 @@ lib.mkMerge [
       export PATH="$HOME/.jenv/bin:$PATH"
       eval "$(jenv init -)"
     '';
+
+    system.activationScripts.postActivation.text = ''
+      jenv add ${pkgs.jdk17}/lib/openjdk
+      jenv add ${pkgs.jdk21}/lib/openjdk
+      jenv add ${pkgs.jdk24}/lib/openjdk
+    '';
   })
   (lib.optionalAttrs isLinux {
     programs.java.enable = true;

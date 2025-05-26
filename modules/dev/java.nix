@@ -20,7 +20,7 @@ lib.mkMerge [
     };
 
     programs.zsh.promptInit = ''
-      export PATH="$HOME/.jenv/bin:$PATH"
+      export PATH="$HOME/.jenv/shims:$PATH"
       eval "$(jenv init -)"
     '';
 

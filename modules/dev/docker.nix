@@ -18,8 +18,4 @@ lib.mkMerge [
       rootless.setSocketVariable = true;
     };
   })
-
-  (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [ "Docker.DockerDesktop" ];
-  })
 ]

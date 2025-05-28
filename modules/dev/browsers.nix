@@ -2,8 +2,10 @@
   config,
   isDarwin,
   isLinux,
+  isWSL,
   pkgs,
   lib,
+  libx,
   ...
 }:
 lib.mkMerge [
@@ -23,5 +25,12 @@ lib.mkMerge [
         "google-chrome"
         "microsoft-edge"
       ];
+  })
+
+  (lib.optionalAttrs isWSL {
+    system.activationScripts.postActivation.text = libx.installWingetPkgs [
+      "Microsoft.Edge"
+      "Mozilla.Firefox"
+    ];
   })
 ]

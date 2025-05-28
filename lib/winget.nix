@@ -23,9 +23,10 @@
             }
           }")
           status=$?
-          echo "PowerShell exit status: $status"
           echo "$output" | grep -v 'tcgetpgrp failed'
-          exit $status
+          if [ $status -ne 0 ]; then
+            echo "PowerShell exit status: $status"
+          fi
         '';
     in
     builtins.concatStringsSep "\n\n" (builtins.map installOne pkgs);

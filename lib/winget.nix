@@ -15,11 +15,11 @@
           echo "🖥️ Installing ${name}"
           output=$(/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command "& {
             ${winget} --id=\"${name}\"${locationArg};
-            $code = [int]$LASTEXITCODE -band 0xFF
-            if ($code -eq 43) {
+            \$code = [int]\$LASTEXITCODE -band 0xFF
+            if (\$code -eq 43) {
               exit 0
             } else {
-              exit $LASTEXITCODE
+              exit \$LASTEXITCODE
             }
           }")
           status=$?

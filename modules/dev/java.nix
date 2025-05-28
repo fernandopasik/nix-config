@@ -25,9 +25,9 @@ lib.mkMerge [
     '';
 
     system.activationScripts.postActivation.text = ''
-      /opt/homebrew/bin/jenv add ${pkgs.jdk17}
-      /opt/homebrew/bin/jenv add ${pkgs.jdk21}
-      /opt/homebrew/bin/jenv add ${pkgs.jdk24}
+      /usr/local/bin/jenv add ${pkgs.jdk17}
+      /usr/local/bin/jenv add ${pkgs.jdk21}
+      /usr/local/bin/jenv add ${pkgs.jdk24}
     '';
   })
   (lib.optionalAttrs isLinux {

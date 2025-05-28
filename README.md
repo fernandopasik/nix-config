@@ -51,29 +51,29 @@ workflow.
 
 1. Install WSL
 
-```bat
-wsl --install --no-distribution
-```
+   ```bat
+   wsl --install --no-distribution
+   ```
 
-2. Download latest NixOS WSL (release)[https://github.com/nix-community/NixOS-WSL/releases/latest]
+2. Download latest NixOS WSL [release](https://github.com/nix-community/NixOS-WSL/releases/latest)
 
 3. Install NixOS WSL
 
-```bat
-wsl --import NixOS D:\WSL\NixOS D:\Downloads\nixoswsl --version 2
-```
+   ```bat
+   wsl --import NixOS D:\WSL\NixOS D:\Downloads\nixoswsl --version 2
+   ```
 
 4. Start NixOS WSL
 
-```bat
-wsl -d NixOS
-```
+   ```bat
+   wsl -d NixOS
+   ```
 
-4. Run flake
+5. Run flake
 
-```sh
-sudo nixos-rebuild switch --refresh --flake github:fernandopasik/nix-config#uac
-```
+   ```sh
+   sudo nixos-rebuild switch --refresh --flake github:fernandopasik/nix-config#uac
+   ```
 
 ## License
 

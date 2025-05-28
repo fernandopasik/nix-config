@@ -47,6 +47,28 @@ workflow.
    sudo darwin-rebuild switch --refresh --flake github:fernandopasik/nix-config#Deimos
    ```
 
+### Windows WSL
+
+1. Install WSL
+
+```bat
+wsl --install --no-distribution
+```
+
+2. Download latest NixOS WSL (release)[https://github.com/nix-community/NixOS-WSL/releases/latest]
+
+3. Install NixOS WSL
+
+```bat
+wsl --import NixOS D:\WSL\NixOS D:\Downloads\nixoswsl --version 2
+```
+
+4. Start NixOS WSL
+
+```bat
+wsl -d NixOS
+```
+
 ## License
 
 MIT (c) 2023 [Fernando Pasik](https://fernandopasik.com)

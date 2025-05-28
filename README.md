@@ -69,6 +69,12 @@ wsl --import NixOS D:\WSL\NixOS D:\Downloads\nixoswsl --version 2
 wsl -d NixOS
 ```
 
+4. Run flake
+
+```sh
+sudo nixos-rebuild switch --refresh --flake github:fernandopasik/nix-config#uac
+```
+
 ## License
 
 MIT (c) 2023 [Fernando Pasik](https://fernandopasik.com)

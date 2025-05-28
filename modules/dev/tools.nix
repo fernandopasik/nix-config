@@ -34,8 +34,8 @@ lib.mkMerge [
   (lib.optionalAttrs isWSL {
     system.activationScripts.postActivation.text = libx.installWingetPkgs [
       "Microsoft.VisualStudioCode"
-      "Microsoft.Notion"
-      "Microsoft.Slack"
+      "Notion.Notion"
+      "SlackTechnologies.Slack"
     ];
   })
 ]

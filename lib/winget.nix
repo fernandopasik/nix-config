@@ -13,7 +13,7 @@
           script = ''
             & {
               ${winget} --id=\"${name}\"${locationArg};
-              if (\$([int]\$LASTEXITCODE -band 0xFF) -eq 43) { exit 0 } else { exit \$LASTEXITCODE }
+              if ([int]$LASTEXITCODE -band 0xFF -eq 43) { exit 0 } else { exit $LASTEXITCODE }
             }
           '';
         in

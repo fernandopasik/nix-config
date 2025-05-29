@@ -11,17 +11,15 @@
 lib.mkMerge [
   (lib.optionalAttrs isDarwin {
     homebrew.casks = [
-      "1password"
-      "nordvpn"
-      "transmission"
+      "stats"
+      "tg-pro"
     ];
   })
 
   (lib.optionalAttrs isWSL {
     system.activationScripts.postActivation.text = libx.installWingetPkgs [
-      "AgileBits.1Password"
-      "NordSecurity.NordVPN"
-      "Transmission.Transmission"
+      "CPUID.CPU-Z"
+      "Rem0o.FanControl"
     ];
   })
 ]

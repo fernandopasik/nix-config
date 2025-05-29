@@ -9,7 +9,7 @@
           isStr = builtins.isString pkg;
           name = if isStr then pkg else pkg.name;
           locationArg = if (!isStr && pkg ? location) then " --location='" + pkg.location + "'" else "";
-          winget = "winget install --accept-package-agreements --silent --disable-interactivity --include-unknown --exact";
+          winget = "winget install --accept-package-agreements --silent --disable-interactivity --exact";
         in
         ''
           echo "🖥️ Installing ${name}"

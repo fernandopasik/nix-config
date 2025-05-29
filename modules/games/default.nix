@@ -1,7 +1,9 @@
 {
   config,
   isDarwin,
+  isWSL,
   lib,
+  libx,
   pkgs,
   ...
 }:
@@ -24,5 +26,17 @@ lib.mkMerge [
       echo "🧹 Removing GOG background service..."
       rm -f /Library/LaunchAgents/com.gog.*
     '';
+  })
+
+  (lib.optionalAttrs isWSL {
+    system.activationScripts.postActivation.text = libx.installWingetPkgs [
+      {
+        name = "Blizzard.BattleNet";
+        location = "C:\\Program Files (x86)\\Battle.net\\";
+      }
+      "EpicGames.EpicGamesLauncher"
+      "GOG.Galaxy"
+      "Valve.Steam"
+    ];
   })
 ]

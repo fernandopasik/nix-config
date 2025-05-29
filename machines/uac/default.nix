@@ -16,6 +16,7 @@
     ../../modules/shell
     ../../modules/dev
     ../../modules/wsl
+    ../../modules/games
     ../../users/fernando
   ];
 

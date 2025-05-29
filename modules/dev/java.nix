@@ -25,9 +25,18 @@ lib.mkMerge [
     '';
 
     system.activationScripts.postActivation.text = ''
-      /usr/local/bin/jenv add ${pkgs.jdk17}
-      /usr/local/bin/jenv add ${pkgs.jdk21}
-      /usr/local/bin/jenv add ${pkgs.jdk24}
+      if [ -x /opt/homebrew/bin/jenv ]; then
+        JENV_CMD=/opt/homebrew/bin/jenv
+      elif [ -x /usr/local/bin/jenv ]; then
+        JENV_CMD=/usr/local/bin/jenv
+      else
+        echo "jenv not found, skipping JDK registration"
+        exit 0
+      fi
+
+      $JENV_CMD add ${pkgs.jdk17}
+      $JENV_CMD add ${pkgs.jdk21}
+      $JENV_CMD add ${pkgs.jdk24}
     '';
   })
   (lib.optionalAttrs isLinux {

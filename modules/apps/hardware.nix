@@ -19,6 +19,8 @@ lib.mkMerge [
   (lib.optionalAttrs isWSL {
     system.activationScripts.postActivation.text = libx.installWingetPkgs [
       "CPUID.CPU-Z"
+      "Guru3D.Afterburner.Beta"
+      "REALiX.HWiNFO"
       "Rem0o.FanControl"
     ];
   })

@@ -18,10 +18,7 @@ lib.mkMerge [
 
   (lib.optionalAttrs isLinux {
     nixpkgs.config.allowUnfreePredicate =
-      pkg:
-      builtins.elem (pkg.pname or (pkg.meta.name or "")) [
-        "google-chrome"
-      ];
+      pkg: builtins.elem (pkg.pname or (pkg.meta.name or "")) [ "google-chrome" ];
   })
 
   (lib.optionalAttrs isWSL {

@@ -13,6 +13,7 @@ in
     ../../modules/nix
     ../../modules/macos
     ../../modules/system
+    ../../modules/google
     ../../modules/shell
     ../../modules/dev
     ../../users/fernando

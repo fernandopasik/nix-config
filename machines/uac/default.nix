@@ -12,6 +12,7 @@
     homeManagerModule
     ../../modules/nix
     ../../modules/system
+    ../../modules/google
     ../../modules/shell
     ../../modules/dev
     ../../modules/wsl

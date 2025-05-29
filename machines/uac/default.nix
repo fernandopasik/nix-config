@@ -12,8 +12,8 @@
     homeManagerModule
     ../../modules/nix
     ../../modules/system
-    ../../modules/google
     ../../modules/shell
+    ../../modules/apps
     ../../modules/dev
     ../../modules/wsl
     ../../modules/games

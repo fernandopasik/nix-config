@@ -9,12 +9,7 @@
   ...
 }:
 lib.mkMerge [
-  (lib.optionalAttrs isDarwin {
-    homebrew.casks = [
-      "google-chrome"
-      "google-drive"
-    ];
-  })
+  (lib.optionalAttrs isDarwin { homebrew.casks = [ "google-chrome" ]; })
 
   (lib.optionalAttrs isLinux {
     nixpkgs.config.allowUnfreePredicate =
@@ -22,9 +17,6 @@ lib.mkMerge [
   })
 
   (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [
-      "Google.Chrome"
-      "Google.GoogleDrive"
-    ];
+    system.activationScripts.postActivation.text = libx.installWingetPkgs [ "Google.Chrome" ];
   })
 ]

@@ -13,8 +13,8 @@ in
     ../../modules/nix
     ../../modules/macos
     ../../modules/system
-    ../../modules/google
     ../../modules/shell
+    ../../modules/apps
     ../../modules/dev
     ../../modules/macos/more-apps.nix
     ../../modules/games

@@ -36,6 +36,7 @@ lib.mkMerge [
       "Microsoft.VisualStudioCode"
       "Notion.Notion"
       "SlackTechnologies.Slack"
+      "DEVCOM.JetBrainsMonoNerdFont"
     ];
   })
 ]

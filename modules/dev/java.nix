@@ -34,9 +34,13 @@ lib.mkMerge [
         exit 0
       fi
 
-      $JENV_CMD add ${pkgs.jdk17}
-      $JENV_CMD add ${pkgs.jdk21}
-      $JENV_CMD add ${pkgs.jdk24}
+      mkdir -p "$HOME/.jenv/versions"
+
+      ln -sf ${pkgs.jdk17} "$HOME/.jenv/versions/17"
+      ln -sf ${pkgs.jdk21} "$HOME/.jenv/versions/21"
+      ln -sf ${pkgs.jdk24} "$HOME/.jenv/versions/24"
+
+      $JENV_CMD rehash
     '';
   })
   (lib.optionalAttrs isLinux {

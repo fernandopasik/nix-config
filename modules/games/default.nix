@@ -32,7 +32,6 @@ lib.mkMerge [
       }
       "EpicGames.EpicGamesLauncher"
       "GOG.Galaxy"
-      "Mojang.MinecraftLauncher"
       "Valve.Steam"
     ];
   })

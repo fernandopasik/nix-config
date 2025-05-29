@@ -19,8 +19,6 @@ lib.mkMerge [
 
         # Fonts
         "font-jetbrains-mono"
-
-        "notion"
       ];
 
       masApps = {
@@ -32,7 +30,6 @@ lib.mkMerge [
   (lib.optionalAttrs isWSL {
     system.activationScripts.postActivation.text = libx.installWingetPkgs [
       "Microsoft.VisualStudioCode"
-      "Notion.Notion"
       "DEVCOM.JetBrainsMonoNerdFont"
     ];
   })

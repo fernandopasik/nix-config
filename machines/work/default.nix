@@ -16,6 +16,8 @@ in
     ../../modules/google
     ../../modules/shell
     ../../modules/dev
+    ../../modules/chat/slack.nix
+    ../../modules/chat/zoom.nix
     ../../users/fernando
   ];
 

@@ -18,6 +18,7 @@ in
     ../../modules/dev
     ../../modules/macos/more-apps.nix
     ../../modules/games
+    ../../modules/chat
     ../../users/fernando
   ];
 

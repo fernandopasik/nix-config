@@ -20,8 +20,6 @@ lib.mkMerge [
         # Fonts
         "font-jetbrains-mono"
 
-        # Chat
-        "slack"
         "notion"
       ];
 
@@ -35,7 +33,6 @@ lib.mkMerge [
     system.activationScripts.postActivation.text = libx.installWingetPkgs [
       "Microsoft.VisualStudioCode"
       "Notion.Notion"
-      "SlackTechnologies.Slack"
       "DEVCOM.JetBrainsMonoNerdFont"
     ];
   })

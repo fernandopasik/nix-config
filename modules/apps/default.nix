@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./apple.nix
     ./compression.nix
     ./google-chrome.nix
     ./google-drive.nix

@@ -25,6 +25,7 @@ lib.mkMerge [
     '';
 
     system.activationScripts.postActivation.text = ''
+      echo "☕️ Setup Java"
       if [ -x /opt/homebrew/bin/jenv ]; then
         JENV_CMD=/opt/homebrew/bin/jenv
       elif [ -x /usr/local/bin/jenv ]; then

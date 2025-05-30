@@ -37,6 +37,9 @@ lib.mkMerge [
 
       mkdir -p "$HOME/.jenv/versions"
 
+      echo "jdk17 path: ${pkgs.jdk17}"
+      echo "jdk21 path: ${pkgs.jdk21}"
+      echo "jdk24 path: ${pkgs.jdk24}"
       ln -sf ${pkgs.jdk17} "$HOME/.jenv/versions/17"
       ln -sf ${pkgs.jdk21} "$HOME/.jenv/versions/21"
       ln -sf ${pkgs.jdk24} "$HOME/.jenv/versions/24"

@@ -35,8 +35,6 @@ lib.mkMerge [
         exit 0
       fi
 
-      $JENV_CMD enable-plugin export
-
       echo $HOME
       ls $HOME
       ls ~

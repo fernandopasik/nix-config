@@ -23,11 +23,11 @@ lib.mkMerge [
       export PATH="$HOME/.jenv/shims:$PATH"
       eval "$(jenv init -)"
 
-      mkdir -p "$HOME/.jenv/versions"
+      [ -e "$HOME/.jenv/versions" ] ||mkdir -p "$HOME/.jenv/versions"
 
-      ln -sf ${pkgs.jdk17} "$HOME/.jenv/versions/17"
-      ln -sf ${pkgs.jdk21} "$HOME/.jenv/versions/21"
-      ln -sf ${pkgs.jdk24} "$HOME/.jenv/versions/24"
+      [ -e "$HOME/.jenv/versions/17" ] || ln -sf ${pkgs.jdk17} "$HOME/.jenv/versions/17"
+      [ -e "$HOME/.jenv/versions/21" ] || ln -sf ${pkgs.jdk21} "$HOME/.jenv/versions/21"
+      [ -e "$HOME/.jenv/versions/24" ] || ln -sf ${pkgs.jdk24} "$HOME/.jenv/versions/24"
 
       $JENV_CMD rehash
     '';

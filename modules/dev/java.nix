@@ -35,6 +35,8 @@ lib.mkMerge [
         exit 0
       fi
 
+      $JENV_CMD enable-plugin export
+
       mkdir -p "$HOME/.jenv/versions"
 
       echo "jdk17 path: ${pkgs.jdk17}"

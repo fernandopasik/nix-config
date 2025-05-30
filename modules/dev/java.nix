@@ -22,10 +22,18 @@ lib.mkMerge [
     programs.zsh.promptInit = ''
       export PATH="$HOME/.jenv/shims:$PATH"
       eval "$(jenv init -)"
+
+      mkdir -p "$HOME/.jenv/versions"
+
+      ln -sf ${pkgs.jdk17} "$HOME/.jenv/versions/17"
+      ln -sf ${pkgs.jdk21} "$HOME/.jenv/versions/21"
+      ln -sf ${pkgs.jdk24} "$HOME/.jenv/versions/24"
+
+      $JENV_CMD rehash
     '';
 
     system.activationScripts.postActivation.text = ''
-      echo "☕️ Setup Java"
+      echo "☕️ Setup Java versions"
       if [ -x /opt/homebrew/bin/jenv ]; then
         JENV_CMD=/opt/homebrew/bin/jenv
       elif [ -x /usr/local/bin/jenv ]; then
@@ -35,19 +43,9 @@ lib.mkMerge [
         exit 0
       fi
 
-      echo $HOME
-      ls $HOME
-      ls ~
-      mkdir -p "$HOME/.jenv/versions"
-
-      echo "jdk17 path: ${pkgs.jdk17}"
-      echo "jdk21 path: ${pkgs.jdk21}"
-      echo "jdk24 path: ${pkgs.jdk24}"
-      ln -sf ${pkgs.jdk17} "$HOME/.jenv/versions/17"
-      ln -sf ${pkgs.jdk21} "$HOME/.jenv/versions/21"
-      ln -sf ${pkgs.jdk24} "$HOME/.jenv/versions/24"
-
-      $JENV_CMD rehash
+      $JENV_CMD add ${pkgs.jdk17}
+      $JENV_CMD add ${pkgs.jdk21}
+      $JENV_CMD add ${pkgs.jdk24}
     '';
   })
   (lib.optionalAttrs isLinux {

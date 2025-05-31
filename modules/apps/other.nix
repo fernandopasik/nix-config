@@ -13,6 +13,7 @@ lib.mkMerge [
     homebrew.casks = [
       "1password"
       "nordvpn"
+      "raspberry-pi-imager"
       "transmission"
     ];
   })
@@ -21,6 +22,8 @@ lib.mkMerge [
     system.activationScripts.postActivation.text = libx.installWingetPkgs [
       "AgileBits.1Password"
       "NordSecurity.NordVPN"
+      "RaspberryPiFoundation.RaspberryPiImager"
+      "Rufus.Rufus"
       "Transmission.Transmission"
     ];
   })

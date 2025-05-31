@@ -5,6 +5,7 @@
     ./options.nix
     ./finder.nix
     ./dock.nix
+    ./menu-bar.nix
   ];
 
   homebrew.enable = true;

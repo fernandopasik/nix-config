@@ -2,16 +2,6 @@
 {
   system = {
     defaults = {
-      controlcenter = {
-        AirDrop = false;
-        BatteryShowPercentage = true;
-        Bluetooth = false;
-        Display = false;
-        FocusModes = false;
-        NowPlaying = false;
-        Sound = false;
-      };
-
       CustomUserPreferences = {
         "com.apple.ActivityMonitor" = {
           IconType = 5;
@@ -84,17 +74,6 @@
         SleepDisabled = false;
         ShutDownDisabled = false;
         ShutDownDisabledWhileLoggedIn = false;
-      };
-
-      menuExtraClock = {
-        FlashDateSeparators = false;
-        IsAnalog = false;
-        Show24Hour = true;
-        ShowAMPM = false;
-        ShowDate = 1;
-        ShowDayOfMonth = true;
-        ShowDayOfWeek = true;
-        ShowSeconds = false;
       };
 
       NSGlobalDomain = {

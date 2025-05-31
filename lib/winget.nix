@@ -14,9 +14,10 @@
         ''
           echo "🖥️ Installing ${name}"
           output=$(/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command "& {
-            ${winget} --id='${name}'${locationArg};
+            \$cmd_output = ${winget} --id='${name}'${locationArg} 2>&1;
             \$code = [int]\$LASTEXITCODE -band 0xFF;
-            if (\$code -eq 43) {
+            if (\$cmd_output -match 'The package cannot be upgraded using winget' -or \$code -eq 43) {
+              \$cmd_output.ForEach({ \$_.Trim() }) | Where-Object { \$_ -notin @(\"\", \"-\", \"\\\", \"|\", \"/\") } | Out-String | Write-Host
               exit 0
             } else {
               exit \$LASTEXITCODE

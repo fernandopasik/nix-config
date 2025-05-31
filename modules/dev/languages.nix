@@ -5,5 +5,6 @@
     # Other Programming languages
     go
     rustc
+    haskellPackages.cabal-install
   ];
 }

@@ -45,6 +45,10 @@
           LSQuarantine = false;
         };
 
+        "com.apple.loginwindow" = {
+          SHOWOTHERUSERS_MANAGED = false;
+        };
+
         "com.apple.messageshelper.MessageController" = {
           automaticEmojiSubstitutionEnablediMessage = false;
           automaticQuoteSubstitutionEnabled = false;
@@ -61,8 +65,6 @@
         "com.apple.TimeMachine" = {
           DoNotOfferNewDisksForBackup = true;
         };
-
-        system.defaults.loginwindow.SHOWOTHERUSERS_MANAGED = false;
       };
 
       loginwindow = {

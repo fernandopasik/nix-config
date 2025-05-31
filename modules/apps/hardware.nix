@@ -18,6 +18,7 @@ lib.mkMerge [
 
   (lib.optionalAttrs isWSL {
     system.activationScripts.postActivation.text = libx.installWingetPkgs [
+      "LuculentSystems.BluetoothBatteryMonitor"
       "CPUID.CPU-Z"
       "Guru3D.Afterburner.Beta"
       "REALiX.HWiNFO"

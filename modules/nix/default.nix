@@ -7,6 +7,11 @@
   ...
 }:
 {
+  environment.systemPackages = with pkgs; [
+    nixfmt-rfc-style
+    statix
+  ];
+
   nix = {
     gc = lib.mkMerge [
       {

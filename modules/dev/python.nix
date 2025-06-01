@@ -42,4 +42,16 @@
       pkgs.zlib.dev
     ];
   };
+
+  programs.zsh.promptInit = ''
+    pipx ensurepath
+  '';
+
+  system.activationScripts.postActivation.text = ''
+    echo "🐍 Setup Python global packages"
+    PIPX_CMD=${pkgs.pipx}/bin/pipx
+
+    $PIPX_CMD install -f poetry
+    $PIPX_CMD install -f pipupgrade
+  '';
 }

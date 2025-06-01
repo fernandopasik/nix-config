@@ -8,6 +8,7 @@
     # Runtime Managers
     pyenv
     pipenv
+    pipx
 
     # Package Managers
     python313Packages.pip

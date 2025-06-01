@@ -29,7 +29,7 @@ lib.mkMerge [
       [ -e "$HOME/.jenv/versions/21" ] || ln -sf ${pkgs.jdk21} "$HOME/.jenv/versions/21"
       [ -e "$HOME/.jenv/versions/24" ] || ln -sf ${pkgs.jdk24} "$HOME/.jenv/versions/24"
 
-      $JENV_CMD rehash
+      jenv rehash
     '';
 
     system.activationScripts.postActivation.text = ''

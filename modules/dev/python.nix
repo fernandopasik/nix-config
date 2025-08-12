@@ -44,7 +44,7 @@
   };
 
   programs.zsh.promptInit = ''
-    export PATH="$HOME/.local/bin"
+    export PATH="$HOME/.local/bin:$PATH"
 
     [ -x "$(command -v poetry)" ] || pipx install poetry
     [ -x "$(command -v pipupgrade)" ] || pipx install pipupgrade

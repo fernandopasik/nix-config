@@ -8,7 +8,12 @@
   ...
 }:
 lib.mkMerge [
-  { environment.systemPackages = with pkgs; [ watchman ]; }
+  {
+    environment.systemPackages = with pkgs; [
+      qemu
+      watchman
+    ];
+  }
 
   (lib.optionalAttrs isDarwin {
     homebrew = {

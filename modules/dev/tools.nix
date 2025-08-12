@@ -16,6 +16,8 @@ lib.mkMerge [
   }
 
   (lib.optionalAttrs isDarwin {
+    environment.systemPackages = with pkgs; [ utm ];
+
     homebrew = {
       casks = [
         # IDE

@@ -7,6 +7,7 @@
     ./nodejs.nix
     ./python.nix
     ./ruby.nix
+    ./go.nix
     ./java.nix
     ./languages.nix
     ./docker.nix

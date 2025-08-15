@@ -50,6 +50,20 @@
         modules = [ ./machines/uac ];
       };
 
+      nixosConfigurations.teitenga = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+
+        specialArgs = {
+          inherit libx;
+          isDarwin = false;
+          isLinux = true;
+          isWSL = false;
+          homeManagerModule = home-manager.nixosModules.home-manager;
+        };
+
+        modules = [ ./machines/teitenga ];
+      };
+
       darwinConfigurations.Deimos = nix-darwin.lib.darwinSystem {
         system = "x86_64-darwin";
 

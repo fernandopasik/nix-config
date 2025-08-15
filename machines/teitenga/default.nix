@@ -15,4 +15,9 @@
   ];
 
   networking.hostName = "teitenga";
+
+  programs.nix-ld = {
+    enable = true;
+    package = pkgs.nix-ld-rs;
+  };
 }

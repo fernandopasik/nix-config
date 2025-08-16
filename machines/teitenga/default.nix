@@ -20,7 +20,7 @@
 
   swapDevices = [
     {
-      device = "/mnt/usb/swapfile";
+      device = "/swapfile";
       size = 2048;
     }
   ];

@@ -69,7 +69,13 @@ workflow.
    wsl -d NixOS
    ```
 
-5. Run flake
+5. Change hostname
+
+   ```sh
+   sudo hostnamectl set-hostname uac
+   ```
+
+6. Run flake
 
    ```sh
    sudo nixos-rebuild switch --refresh --flake github:fernandopasik/nix-config#uac

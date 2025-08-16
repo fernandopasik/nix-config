@@ -8,8 +8,9 @@
 {
   imports = [
     homeManagerModule
-    ../../modules/raspberrypi
     ../../modules/nix
+    ../../modules/linux
+    ../../modules/raspberrypi
     ../../modules/system
     ../../modules/shell
     ../../users/fernando

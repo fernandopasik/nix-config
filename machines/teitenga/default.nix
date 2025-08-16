@@ -12,7 +12,7 @@
     ../../modules/linux
     ../../modules/raspberrypi
     ../../modules/system
-    ../../modules/shell
+    # ../../modules/shell
     ../../users/fernando
   ];
 

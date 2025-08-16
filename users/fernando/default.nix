@@ -109,10 +109,7 @@ in
   };
 
   users.users.fernando = lib.mkMerge [
-    {
-      shell = pkgs.zsh;
-      home = if isDarwin then "/Users/fernando" else "/home/fernando";
-    }
+    { home = if isDarwin then "/Users/fernando" else "/home/fernando"; }
     (lib.optionalAttrs isLinux {
       isNormalUser = true;
       extraGroups = [
@@ -121,5 +118,6 @@ in
         "wheel"
       ];
     })
+    (lib.optionalAttrs isDarwin { shell = pkgs.zsh; })
   ];
 }

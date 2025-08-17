@@ -11,19 +11,12 @@
     ../../modules/nix
     ../../modules/linux
     ../../modules/raspberrypi
-    # ../../modules/system
-    # ../../modules/shell
+    ../../modules/system
+    ../../modules/shell
     ../../users/fernando
   ];
 
-  networking.hostName = "teitenga";
-
-  swapDevices = [
-    {
-      device = "/swapfile";
-      size = 2048;
-    }
-  ];
+  networking.hostName = "trantor";
 
   programs.nix-ld = {
     enable = true;

@@ -50,7 +50,7 @@
         modules = [ ./machines/uac ];
       };
 
-      nixosConfigurations.teitenga = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.trantor = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
 
         specialArgs = {
@@ -61,7 +61,7 @@
           homeManagerModule = home-manager.nixosModules.home-manager;
         };
 
-        modules = [ ./machines/teitenga ];
+        modules = [ ./machines/trantor ];
       };
 
       darwinConfigurations.Deimos = nix-darwin.lib.darwinSystem {

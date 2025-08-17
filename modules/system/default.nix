@@ -30,6 +30,7 @@
       bzip2
       xz
       zlib
+      zstd
     ]
     ++ lib.optionals isLinux [ lsb-release ];
 }

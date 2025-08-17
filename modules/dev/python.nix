@@ -21,6 +21,7 @@
     gcc
     jq
     libffi
+    libusb1
     gnumake
     readline
     sqlite
@@ -36,6 +37,7 @@
     variables.PKG_CONFIG_PATH = pkgs.lib.makeSearchPath "lib/pkgconfig" [
       pkgs.bzip2.dev
       pkgs.libffi.dev
+      pkgs.libusb1.dev
       pkgs.openssl.dev
       pkgs.readline.dev
       pkgs.sqlite.dev

@@ -13,6 +13,10 @@
 
     # VMs
     qemu
+
+    # Tools
+    opentofu
+    pulumi
   ];
 
   nixpkgs.config.allowUnfreePredicate =

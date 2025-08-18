@@ -12,6 +12,20 @@ workflow.
 
 ## Install Nix
 
+### NixOS
+
+1. Change hostname
+
+   ```sh
+   sudo hostname trantor
+   ```
+
+2. Run flake
+
+   ```sh
+   sudo nixos-rebuild switch --refresh --flake github:fernandopasik/nix-config#trantor
+   ```
+
 ### MacOS
 
 1. Install Nix
@@ -72,7 +86,7 @@ workflow.
 5. Change hostname
 
    ```sh
-   sudo hostnamectl set-hostname uac
+   sudo hostname uac
    ```
 
 6. Run flake

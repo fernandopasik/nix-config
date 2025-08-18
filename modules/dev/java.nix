@@ -12,6 +12,10 @@ lib.mkMerge [
       jdk24
       jdk21
       jdk17
+
+      kotlin
+      gradle
+      maven
     ];
   }
   (lib.optionalAttrs isDarwin {

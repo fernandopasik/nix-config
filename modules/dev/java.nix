@@ -9,7 +9,7 @@
 lib.mkMerge [
   {
     environment.systemPackages = with pkgs; [
-      jdk24
+      jdk25
       jdk21
       jdk17
 
@@ -31,7 +31,7 @@ lib.mkMerge [
 
       [ -e "$HOME/.jenv/versions/17" ] || ln -sf ${pkgs.jdk17} "$HOME/.jenv/versions/17"
       [ -e "$HOME/.jenv/versions/21" ] || ln -sf ${pkgs.jdk21} "$HOME/.jenv/versions/21"
-      [ -e "$HOME/.jenv/versions/24" ] || ln -sf ${pkgs.jdk24} "$HOME/.jenv/versions/24"
+      [ -e "$HOME/.jenv/versions/25" ] || ln -sf ${pkgs.jdk25} "$HOME/.jenv/versions/25"
 
       jenv rehash
     '';
@@ -49,14 +49,14 @@ lib.mkMerge [
 
       $JENV_CMD add ${pkgs.jdk17}
       $JENV_CMD add ${pkgs.jdk21}
-      $JENV_CMD add ${pkgs.jdk24}
+      $JENV_CMD add ${pkgs.jdk25}
     '';
   })
   (lib.optionalAttrs isLinux {
     programs.java.enable = true;
 
     programs.zsh.promptInit = ''
-      export JAVA_HOME="${pkgs.jdk24}/lib/openjdk"
+      export JAVA_HOME="${pkgs.jdk25}/lib/openjdk"
     '';
   })
 ]

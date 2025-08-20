@@ -15,6 +15,11 @@ let
     url = "https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot";
     sha256 = lib.fakeSha256;
   };
+
+  viaVersionJar = pkgs.fetchurl {
+    url = "https://github.com/ViaVersion/ViaVersion/releases/download/5.5.0/ViaVersion-5.5.0.jar";
+    sha256 = lib.fakeSha256;
+  };
 in
 
 {
@@ -50,6 +55,7 @@ in
     mkdir -p ${config.services.minecraft-server.dataDir}/plugins
     cp ${geyserJar} ${config.services.minecraft-server.dataDir}/plugins/Geyser-Spigot.jar
     cp ${floodgateJar} ${config.services.minecraft-server.dataDir}/plugins/Floodgate-Spigot.jar
+    cp ${viaVersionJar} ${config.services.minecraft-server.dataDir}/plugins/ViaVersion.jar
     chown minecraft:minecraft ${config.services.minecraft-server.dataDir}/plugins/*.jar
     chmod 644 ${config.services.minecraft-server.dataDir}/plugins/*.jar
   '';

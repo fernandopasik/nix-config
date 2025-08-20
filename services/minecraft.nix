@@ -1,14 +1,19 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   geyserJar = pkgs.fetchurl {
     url = "https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot";
-    sha256 = "1bg5cbg55izbm1ng4bwcv2340qd80dgfsvssfvjnvb22y4cfza63";
+    sha256 = lib.fakeSha256;
   };
 
   floodgateJar = pkgs.fetchurl {
     url = "https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot";
-    sha256 = "0b5apjpb269mzs0dhgyzp9ayh1xz5w5cwry9i62zb0yngdcg8s9v";
+    sha256 = lib.fakeSha256;
   };
 in
 

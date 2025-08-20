@@ -13,6 +13,7 @@
     ../../modules/raspberrypi
     ../../modules/system
     ../../modules/shell
+    ../../modules/dev/docker.nix
     ../../users/fernando
   ];
 

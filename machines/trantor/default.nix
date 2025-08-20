@@ -14,6 +14,7 @@
     ../../modules/system
     ../../modules/shell
     ../../modules/dev/docker.nix
+    ../../services
     ../../users/fernando
   ];
 

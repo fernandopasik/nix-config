@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   networking.firewall = {
@@ -16,6 +16,7 @@
       enable = true;
       eula = true;
       openFirewall = true;
+      package = pkgs.papermc;
       serverProperties = {
         level-name = "Fernando's World";
         max-players = 5;

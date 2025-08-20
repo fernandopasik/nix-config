@@ -1,24 +1,16 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ config, pkgs, ... }:
 
 let
   geyserJar = pkgs.fetchurl {
     url = "https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot";
-    sha256 = lib.fakeSha256;
   };
 
   floodgateJar = pkgs.fetchurl {
     url = "https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot";
-    sha256 = lib.fakeSha256;
   };
 
   viaVersionJar = pkgs.fetchurl {
     url = "https://github.com/ViaVersion/ViaVersion/releases/download/5.5.0/ViaVersion-5.5.0.jar";
-    sha256 = lib.fakeSha256;
   };
 in
 

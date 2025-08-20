@@ -10,7 +10,6 @@
   environment.systemPackages = with pkgs; [
     zsh
     zsh-autosuggestions
-    zsh-git-prompt
     zsh-history-substring-search
     zsh-syntax-highlighting
     starship

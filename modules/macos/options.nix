@@ -68,14 +68,17 @@
       };
 
       loginwindow = {
+        autoLoginUser = null;
         DisableConsoleAccess = false;
         GuestEnabled = false;
+        LoginwindowText = "Welcome!";
         PowerOffDisabledWhileLoggedIn = false;
         RestartDisabled = false;
         RestartDisabledWhileLoggedIn = false;
-        SleepDisabled = false;
+        SHOWFULLNAME = false;
         ShutDownDisabled = false;
         ShutDownDisabledWhileLoggedIn = false;
+        SleepDisabled = false;
       };
 
       NSGlobalDomain = {

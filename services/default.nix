@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./minecraft.nix ];
+  imports = [
+    ./grafana.nix
+    ./minecraft.nix
+    ./prometheus.nix
+  ];
 }

@@ -1,6 +1,11 @@
 { config, ... }:
 
 {
+  networking.firewall = {
+    allowedTCPPorts = [ 3000 ];
+    enable = true;
+  };
+
   services.grafana = {
     enable = true;
 

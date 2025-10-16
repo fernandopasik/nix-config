@@ -7,12 +7,7 @@
     exporters = {
       node = {
         enable = true;
-
-        enabledCollectors = [
-          "cpu"
-          "memory"
-          "disk"
-        ];
+        listenAddress = "0.0.0.0:9100";
       };
     };
 

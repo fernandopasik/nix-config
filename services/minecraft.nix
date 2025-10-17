@@ -48,6 +48,7 @@ in
   system.activationScripts.text = ''
     echo "Copying Minecraft plugins"
     mkdir -p ${config.services.minecraft-server.dataDir}/plugins
+    rm -rf ${config.services.minecraft-server.dataDir}/plugins/*
     cp ${geyserJar} ${config.services.minecraft-server.dataDir}/plugins/Geyser-Spigot.jar
     cp ${floodgateJar} ${config.services.minecraft-server.dataDir}/plugins/Floodgate-Spigot.jar
     cp ${viaVersionJar} ${config.services.minecraft-server.dataDir}/plugins/ViaVersion.jar

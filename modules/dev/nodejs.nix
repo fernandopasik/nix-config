@@ -12,9 +12,9 @@
     volta
 
     # Packages
-    nodePackages_latest.npm
-    nodePackages_latest.npm-check-updates
-    nodePackages_latest.yo
+    nodejs_24.pkgs.npm
+    nodejs_24.pkgs.npm-check-updates
+    nodejs_24.pkgs.yo
   ];
 
   programs.zsh.promptInit = ''

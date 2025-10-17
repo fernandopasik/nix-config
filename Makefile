@@ -30,10 +30,10 @@ rebuild-nixos:
 rebuild-darwin:
 	sudo darwin-rebuild switch --refresh --flake .#Deimos
 
-flake-update:
+update:
 	nix flake update
 
-nix-gc:
+gc:
 	sudo nix-collect-garbage -d
 	nix-collect-garbage -d
 	sudo nix-store --gc

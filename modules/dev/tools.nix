@@ -8,12 +8,7 @@
   ...
 }:
 lib.mkMerge [
-  {
-    environment.systemPackages = with pkgs; [
-      qemu
-      watchman
-    ];
-  }
+  { environment.systemPackages = with pkgs; [ watchman ]; }
 
   (lib.optionalAttrs isDarwin {
     environment.systemPackages = with pkgs; [ utm ];

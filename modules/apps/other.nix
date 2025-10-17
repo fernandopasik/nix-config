@@ -23,6 +23,7 @@ lib.mkMerge [
       "AgileBits.1Password"
       "NordSecurity.NordVPN"
       "RaspberryPiFoundation.RaspberryPiImager"
+      "Romanitho.Winget-AutoUpdate"
       "Rufus.Rufus"
       "Transmission.Transmission"
     ];

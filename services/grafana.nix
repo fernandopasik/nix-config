@@ -42,6 +42,7 @@
       server = {
         enable_gzip = true;
         http_port = 3000;
+        http_addr = "0.0.0.0";
       };
     };
   };

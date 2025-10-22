@@ -11,17 +11,15 @@
 lib.mkMerge [
   (lib.optionalAttrs isDarwin {
     homebrew.casks = [
-      "raspberry-pi-imager"
-      "transmission"
+      "1password"
+      "nordvpn"
     ];
   })
 
   (lib.optionalAttrs isWSL {
     system.activationScripts.postActivation.text = libx.installWingetPkgs [
-      "RaspberryPiFoundation.RaspberryPiImager"
-      "Romanitho.Winget-AutoUpdate"
-      "Rufus.Rufus"
-      "Transmission.Transmission"
+      "AgileBits.1Password"
+      "NordSecurity.NordVPN"
     ];
   })
 ]

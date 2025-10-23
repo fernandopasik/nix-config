@@ -58,7 +58,7 @@ workflow.
 4. Run flake
 
    ```sh
-   sudo darwin-rebuild switch --refresh --flake github:fernandopasik/nix-config#Deimos
+   sudo darwin-rebuild switch --refresh --flake github:fernandopasik/nix-config#$(hostname)
    ```
 
 ### Windows WSL
@@ -92,7 +92,7 @@ workflow.
 6. Run flake
 
    ```sh
-   sudo nixos-rebuild switch --refresh --flake github:fernandopasik/nix-config#uac
+   sudo nixos-rebuild switch --refresh --flake github:fernandopasik/nix-config#$(hostname)
    ```
 
 ## License

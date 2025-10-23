@@ -25,10 +25,10 @@ hooks:
 	pre-commit run --all-files
 
 rebuild-nixos:
-	sudo nixos-rebuild switch --refresh --flake .#uac
+	sudo nixos-rebuild switch --refresh --flake .#$(shell hostname)
 
 rebuild-darwin:
-	sudo darwin-rebuild switch --refresh --flake .#Deimos
+	sudo darwin-rebuild switch --refresh --flake .#$(shell hostname)
 
 update:
 	nix flake update

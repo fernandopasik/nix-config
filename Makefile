@@ -24,11 +24,12 @@ lint:
 hooks:
 	pre-commit run --all-files
 
-rebuild-nixos:
-	sudo nixos-rebuild switch --refresh --flake .#$(shell hostname)
-
-rebuild-darwin:
+rebuild:
+ifeq ($(shell uname),Darwin)
 	sudo darwin-rebuild switch --refresh --flake .#$(shell hostname)
+else
+	sudo nixos-rebuild switch --refresh --flake .#$(shell hostname)
+endif
 
 update:
 	nix flake update

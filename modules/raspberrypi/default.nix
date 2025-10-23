@@ -6,6 +6,8 @@
       grub.enable = false;
       generic-extlinux-compatible.enable = true;
     };
+
+    kernelPackages = pkgs.linuxPackages_rpi4;
   };
 
   environment.systemPackages = [ pkgs.raspberrypi-eeprom ];

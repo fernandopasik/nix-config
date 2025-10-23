@@ -31,6 +31,11 @@
       xz
       zlib
       zstd
+
+      # dev tools
+      gcc
+      gnumake
+      jq
     ]
     ++ lib.optionals isLinux [ lsb-release ];
 }

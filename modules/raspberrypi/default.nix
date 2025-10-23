@@ -8,6 +8,8 @@
     };
   };
 
+  environment.systemPackages = [ pkgs.raspberrypi-eeprom ];
+
   fileSystems."/firmware" = {
     device = "/dev/disk/by-label/FIRMWARE";
     fsType = "vfat";

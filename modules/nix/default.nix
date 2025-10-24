@@ -17,15 +17,17 @@
       {
         automatic = true;
         options = "--delete-older-than 1w";
-        persistent = true;
-        randomizedDelaySec = "30sec";
       }
       (lib.optionalAttrs isDarwin {
         interval = {
           Weekday = 0;
         };
       })
-      (lib.optionalAttrs isLinux { dates = "weekly"; })
+      (lib.optionalAttrs isLinux {
+        dates = "weekly";
+        persistent = true;
+        randomizedDelaySec = "30sec";
+      })
     ];
 
     settings.experimental-features = [

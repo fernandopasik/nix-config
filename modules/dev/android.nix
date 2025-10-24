@@ -32,13 +32,13 @@ lib.mkMerge (
       ]
       ++ lib.optionals (pkgs.system == "aarch64-darwin") [
         # System images (emulators)
-        system-images-android-35-google-apis-arm64-v8a
-        system-images-android-36-google-apis-arm64-v8a
+        system-images-android-35-google-apis-playstore-arm64-v8a
+        system-images-android-36-google-apis-playstore-arm64-v8a
       ]
       ++ lib.optionals (pkgs.system == "x86_64-linux" || pkgs.system == "x86_64-darwin") [
         # System images (emulators)
-        system-images-android-35-google-apis-x86-64
-        system-images-android-36-google-apis-x86-64
+        system-images-android-35-google-apis-playstore-x86-64
+        system-images-android-36-google-apis-playstore-x86-64
       ]
     );
   in

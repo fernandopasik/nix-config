@@ -16,7 +16,9 @@
     gc = lib.mkMerge [
       {
         automatic = true;
-        options = "--delete-older-than 5";
+        options = "--delete-older-than 1w";
+        persistent = true;
+        randomizedDelaySec = "30sec";
       }
       (lib.optionalAttrs isDarwin {
         interval = {

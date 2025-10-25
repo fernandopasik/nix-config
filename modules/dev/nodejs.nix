@@ -1,9 +1,17 @@
 { config, pkgs, ... }:
 
+let
+  node24Overlay = final: prev: {
+    nodejs = prev.nodejs_24;
+    nodePackages = prev.nodePackages.override { nodejs = prev.nodejs_24; };
+  };
+in
 {
+  nixpkgs.overlays = [ node24Overlay ];
+
   environment.systemPackages = with pkgs; [
     # Runtimes
-    nodejs_24
+    nodejs
     bun
     deno
 
@@ -12,9 +20,9 @@
     volta
 
     # Packages
-    nodejs_24.pkgs.npm
-    nodejs_24.pkgs.npm-check-updates
-    nodejs_24.pkgs.yo
+    nodePackages.npm
+    nodePackages.npm-check-updates
+    nodePackages.yo
   ];
 
   programs.zsh.promptInit = ''

@@ -18,9 +18,9 @@ in
     ../../modules/apps/google-drive.nix
     ../../modules/apps/compression.nix
     ../../modules/apps/notion.nix
-    ../../modules/dev
-    ../../modules/chat/slack.nix
     ../../modules/chat/zoom.nix
+    ../../modules/chat/slack.nix
+    ../../modules/dev
     ../../users/fernando
   ];
 

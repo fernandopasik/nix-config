@@ -1,7 +1,13 @@
-{ config, pkgs, ... }:
+{
+  config,
+  isDarwin,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports = [
+  imports = lib.optionals isDarwin [ ./apple.nix ] ++ [
     ./discord.nix
     ./signal.nix
     ./slack.nix

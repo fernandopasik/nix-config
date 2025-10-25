@@ -45,6 +45,7 @@
           "/System/Applications/Facetime.app"
           "/System/Applications/Messages.app"
           "/Applications/WhatsApp.app"
+          "/System/Applications/Notes.app"
         ];
       };
     };

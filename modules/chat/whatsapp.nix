@@ -8,7 +8,10 @@
   ...
 }:
 lib.mkMerge [
-  (lib.optionalAttrs isDarwin { homebrew.casks = [ "whatsapp" ]; })
+  (lib.optionalAttrs isDarwin {
+    homebrew.casks = [ "whatsapp" ];
+    system.defaults.persistent-apps = [ "/Applications/whatsapp.app" ];
+  })
 
   (lib.optionalAttrs isWSL {
     system.activationScripts.postActivation.text = libx.installWingetPkgs [

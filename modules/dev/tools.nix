@@ -27,6 +27,11 @@ lib.mkMerge [
         Xcode = 497799835;
       };
     };
+
+    system.defaults.dock.persistent-apps = [
+      "/Applications/Visual Studio Code.app"
+      "/Applications/Ghostty.app"
+    ];
   })
 
   (lib.optionalAttrs isWSL {

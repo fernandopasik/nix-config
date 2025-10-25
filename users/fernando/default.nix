@@ -100,11 +100,6 @@ in
   ];
 
   system = lib.optionalAttrs isDarwin {
-    defaults.dock.persistent-apps = [
-      "/System/Applications/Notes.app"
-      "/Applications/Visual Studio Code.app"
-    ];
-
     defaults.dock.persistent-others = [ "/Users/fernando/Downloads" ];
   };
 

@@ -10,7 +10,7 @@
 lib.mkMerge [
   (lib.optionalAttrs isDarwin {
     homebrew.casks = [ "whatsapp" ];
-    system.defaults.persistent-apps = [ "/Applications/whatsapp.app" ];
+    system.defaults.dock.persistent-apps = [ "/Applications/whatsapp.app" ];
   })
 
   (lib.optionalAttrs isWSL {

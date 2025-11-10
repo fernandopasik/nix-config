@@ -12,6 +12,7 @@ lib.mkMerge [
   (lib.optionalAttrs isDarwin {
     homebrew.casks = [
       "firefox"
+      "librewolf"
       "microsoft-edge"
     ];
   })
@@ -29,6 +30,7 @@ lib.mkMerge [
 
   (lib.optionalAttrs isWSL {
     system.activationScripts.postActivation.text = libx.installWingetPkgs [
+      "LibreWolf.LibreWolf"
       "Microsoft.Edge"
       "Mozilla.Firefox"
     ];

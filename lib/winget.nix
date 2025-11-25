@@ -12,6 +12,13 @@
           winget = "winget install --accept-package-agreements --silent --disable-interactivity --exact";
         in
         ''
+          OLD_SYSTEM=$(readlink -f /run/current-system 2>/dev/null || true)
+          NEW_SYSTEM=$(readlink -f /nix/var/nix/profiles/system)
+
+          if [ "$OLD_SYSTEM" == "$NEW_SYSTEM" ]; then
+            exit 0
+          fi
+
           echo "🖥️ Installing ${name}"
           output=$(/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command "& {
             \$cmd_output = ${winget} --id='${name}'${locationArg} 2>&1;

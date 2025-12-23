@@ -33,6 +33,9 @@
       StandardError = "journal";
       Environment = "PATH=/run/current-system/sw/bin:/run/wrappers/bin";
     };
+    unitConfig = {
+      ConditionPathExists = "!/var/lib/npm/.installed";
+    };
     script = ''
       set -euo pipefail
 
@@ -44,6 +47,8 @@
       echo "📦 Installing npm global packages"
       ${pkgs.nodejs_24}/bin/npm install -g --prefix "$NPM_CONFIG_PREFIX" npm npm-check-updates
       ${pkgs.nodejs_24}/bin/npm install -g --prefix "$NPM_CONFIG_PREFIX" --loglevel=error yo
+
+      touch /var/lib/npm/.installed
     '';
     wantedBy = [ "multi-user.target" ];
   };

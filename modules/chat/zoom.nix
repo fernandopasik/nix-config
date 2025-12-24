@@ -3,7 +3,6 @@
   isDarwin,
   isWSL,
   lib,
-  libx,
   pkgs,
   ...
 }:
@@ -18,7 +17,5 @@ lib.mkMerge [
     '';
   })
 
-  (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [ "Zoom.Zoom" ];
-  })
+  (lib.optionalAttrs isWSL { winget.packages = [ "Zoom.Zoom" ]; })
 ]

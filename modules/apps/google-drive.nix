@@ -5,13 +5,10 @@
   isWSL,
   pkgs,
   lib,
-  libx,
   ...
 }:
 lib.mkMerge [
   (lib.optionalAttrs isDarwin { homebrew.casks = [ "google-drive" ]; })
 
-  (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [ "Google.GoogleDrive" ];
-  })
+  (lib.optionalAttrs isWSL { winget.packages = [ "Google.GoogleDrive" ]; })
 ]

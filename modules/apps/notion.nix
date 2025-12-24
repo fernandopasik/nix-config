@@ -5,7 +5,6 @@
   isWSL,
   pkgs,
   lib,
-  libx,
   ...
 }:
 lib.mkMerge [
@@ -15,7 +14,5 @@ lib.mkMerge [
     system.defaults.dock.persistent-apps = [ "/Applications/Notion.app" ];
   })
 
-  (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [ "Notion.Notion" ];
-  })
+  (lib.optionalAttrs isWSL { winget.packages = [ "Notion.Notion" ]; })
 ]

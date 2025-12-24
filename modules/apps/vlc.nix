@@ -5,13 +5,10 @@
   isWSL,
   pkgs,
   lib,
-  libx,
   ...
 }:
 lib.mkMerge [
   (lib.optionalAttrs isDarwin { homebrew.casks = [ "vlc" ]; })
 
-  (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [ "VideoLAN.VLC" ];
-  })
+  (lib.optionalAttrs isWSL { winget.packages = [ "VideoLAN.VLC" ]; })
 ]

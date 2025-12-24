@@ -5,7 +5,6 @@
   isWSL,
   pkgs,
   lib,
-  libx,
   ...
 }:
 lib.mkMerge [
@@ -17,7 +16,7 @@ lib.mkMerge [
   })
 
   (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [
+    winget.packages = [
       "RaspberryPiFoundation.RaspberryPiImager"
       "Romanitho.Winget-AutoUpdate"
       "Rufus.Rufus"

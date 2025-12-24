@@ -3,7 +3,6 @@
   isDarwin,
   isWSL,
   lib,
-  libx,
   pkgs,
   ...
 }:
@@ -25,7 +24,7 @@ lib.mkMerge [
   })
 
   (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [
+    winget.packages = [
       {
         name = "Blizzard.BattleNet";
         location = "C:\\Program Files (x86)\\Battle.net\\";

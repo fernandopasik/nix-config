@@ -10,6 +10,7 @@
   imports = [
     wslModule
     homeManagerModule
+    ../../modules/windows
     ../../modules/nix
     ../../modules/system
     ../../modules/shell

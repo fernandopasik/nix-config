@@ -5,7 +5,6 @@
   isWSL,
   pkgs,
   lib,
-  libx,
   ...
 }:
 lib.mkMerge [
@@ -16,7 +15,5 @@ lib.mkMerge [
       pkg: builtins.elem (pkg.pname or (pkg.meta.name or "")) [ "google-chrome" ];
   })
 
-  (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [ "Google.Chrome" ];
-  })
+  (lib.optionalAttrs isWSL { winget.packages = [ "Google.Chrome" ]; })
 ]

@@ -5,13 +5,10 @@
   isWSL,
   pkgs,
   lib,
-  libx,
   ...
 }:
 lib.mkMerge [
   (lib.optionalAttrs isDarwin { homebrew.casks = [ "spotify" ]; })
 
-  (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [ "Spotify.Spotify" ];
-  })
+  (lib.optionalAttrs isWSL { winget.packages = [ "Spotify.Spotify" ]; })
 ]

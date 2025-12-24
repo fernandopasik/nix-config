@@ -3,7 +3,6 @@
   isDarwin,
   isWSL,
   lib,
-  libx,
   pkgs,
   ...
 }:
@@ -35,7 +34,7 @@ lib.mkMerge [
   })
 
   (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [
+    winget.packages = [
       "Microsoft.VisualStudioCode"
       "DEVCOM.JetBrainsMonoNerdFont"
     ];

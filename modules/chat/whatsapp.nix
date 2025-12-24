@@ -3,7 +3,6 @@
   isDarwin,
   isWSL,
   lib,
-  libx,
   pkgs,
   ...
 }:
@@ -14,7 +13,7 @@ lib.mkMerge [
   })
 
   (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [
+    winget.packages = [
       "9NKSQGP7F2NH" # WhatsApp
     ];
   })

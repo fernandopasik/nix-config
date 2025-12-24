@@ -4,7 +4,6 @@
   isLinux,
   isWSL,
   lib,
-  libx,
   pkgs,
   ...
 }:

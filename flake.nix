@@ -30,15 +30,12 @@
       nixpkgs,
       android-nixpkgs,
     }:
-    let
-      libx = import ./lib { inherit (nixpkgs) lib; };
-    in
+
     {
       nixosConfigurations.uac = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
-          inherit libx;
           isDarwin = false;
           isLinux = true;
           isWSL = true;
@@ -54,7 +51,6 @@
         system = "aarch64-linux";
 
         specialArgs = {
-          inherit libx;
           isDarwin = false;
           isLinux = true;
           isWSL = false;
@@ -68,7 +64,6 @@
         system = "x86_64-darwin";
 
         specialArgs = {
-          inherit libx;
           isDarwin = true;
           isLinux = false;
           isWSL = false;
@@ -83,7 +78,6 @@
         system = "aarch64-darwin";
 
         specialArgs = {
-          inherit libx;
           isDarwin = true;
           isLinux = false;
           isWSL = false;

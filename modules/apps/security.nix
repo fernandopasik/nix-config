@@ -5,7 +5,6 @@
   isWSL,
   pkgs,
   lib,
-  libx,
   ...
 }:
 lib.mkMerge [
@@ -23,7 +22,7 @@ lib.mkMerge [
   })
 
   (lib.optionalAttrs isWSL {
-    system.activationScripts.postActivation.text = libx.installWingetPkgs [
+    winget.packages = [
       "AgileBits.1Password"
       "NordSecurity.NordVPN"
       "Yubico.Authenticator"

@@ -13,43 +13,27 @@
   ];
 
   programs.zsh.promptInit = ''
-    export NPM_CONFIG_PREFIX="/var/lib/npm/node_packages/"
-    export PATH="/var/lib/npm/node_packages/bin:$PATH"
+    export NPM_CONFIG_PREFIX="/var/lib/npm"
+    export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
 
     export VOLTA_HOME="$HOME/.volta";
     export PATH="$VOLTA_HOME/bin:$PATH"
   '';
 
-  systemd.services.npm-global-install = {
-    description = "Install global npm packages for wheel users";
-    after = [ "network.target" ];
-    wants = [ "network.target" ];
-    serviceConfig = {
-      Type = "oneshot";
-      User = "root";
-      Group = "wheel";
-      RemainAfterExit = true;
-      StandardOutput = "journal";
-      StandardError = "journal";
-      Environment = "PATH=/run/current-system/sw/bin:/run/wrappers/bin";
-    };
-    unitConfig = {
-      ConditionPathExists = "!/var/lib/npm/.installed";
-    };
-    script = ''
-      set -euo pipefail
+  system.activationScripts.npm-global-install = {
+    deps = [ "users" ];
+    text = ''
+      if [ "$NIXOS_ACTION" = "switch" ]; then
+        set -euo pipefail
 
-      NPM_CONFIG_PREFIX=/var/lib/npm/node_packages
-      mkdir -p "$NPM_CONFIG_PREFIX"
-      chown root:wheel "$NPM_CONFIG_PREFIX"
-      chmod 775 "$NPM_CONFIG_PREFIX"
+        NPM_CONFIG_PREFIX=/var/lib/npm
+        mkdir -p "$NPM_CONFIG_PREFIX"
+        chown root:wheel "$NPM_CONFIG_PREFIX"
+        chmod 775 "$NPM_CONFIG_PREFIX"
 
-      echo "📦 Installing npm global packages"
-      ${pkgs.nodejs_24}/bin/npm install -g --prefix "$NPM_CONFIG_PREFIX" npm npm-check-updates
-      ${pkgs.nodejs_24}/bin/npm install -g --prefix "$NPM_CONFIG_PREFIX" --loglevel=error yo
-
-      touch /var/lib/npm/.installed
+        echo "📦 Installing npm global packages"
+        ${pkgs.nodejs_24}/bin/npm i -g --prefix "$NPM_CONFIG_PREFIX" npm npm-check-updates
+      fi
     '';
-    wantedBy = [ "multi-user.target" ];
   };
 }

@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nix-darwin = {
-      url = "github:lnl7/nix-darwin";
+      url = "github:lnl7/nix-darwin/nix-darwin-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-wsl = {

@@ -3,17 +3,17 @@
 let
   geyserJar = pkgs.fetchurl {
     url = "https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot";
-    sha256 = "00i54y59qv4v28ifn4k8jw6zsn04hrlcsvs6rjh8x1732x7samdz";
+    sha256 = "1y2dbfnq6l3rqc0n4dj6mk9frfmlnvmn93k2y7yv2aivic65kxka";
   };
 
   floodgateJar = pkgs.fetchurl {
     url = "https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot";
-    sha256 = "1dhfh42rx9pc407kfjs8xa3ajh03p9132vyiyp6awbrnkc3pg4vk";
+    sha256 = "1n85y61crp5ggg9q3d5qxnvfk9jd418lxziz4rdwdkkmv1nayiyn";
   };
 
   viaVersionJar = pkgs.fetchurl {
-    url = "https://github.com/ViaVersion/ViaVersion/releases/download/5.5.1/ViaVersion-5.5.1.jar";
-    sha256 = "041hyyvj7hcmmdfa4aa7bq9vhj2ihglp51r0nla1gb1yyr97a78p";
+    url = "https://github.com/ViaVersion/ViaVersion/releases/download/5.7.0/ViaVersion-5.7.0.jar";
+    sha256 = "199bnvvx9dxiywh406f6a7sn4q5qp0l3jh1malabafia2qc09b7n";
   };
 in
 

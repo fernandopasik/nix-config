@@ -14,6 +14,7 @@ lib.mkMerge [
       "nordvpn"
       "yubico-authenticator"
       "yubico-yubikey-manager"
+      "wireshark-app"
     ];
   })
 
@@ -27,6 +28,7 @@ lib.mkMerge [
       "NordSecurity.NordVPN"
       "Yubico.Authenticator"
       "Yubico.YubiKeyManagerCLI"
+      "WiresharkFoundation.Wireshark"
     ];
   })
 ]

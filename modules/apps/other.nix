@@ -10,6 +10,7 @@
 lib.mkMerge [
   (lib.optionalAttrs isDarwin {
     homebrew.casks = [
+      "freetube"
       "raspberry-pi-imager"
       "transmission"
     ];
@@ -17,6 +18,7 @@ lib.mkMerge [
 
   (lib.optionalAttrs isWSL {
     winget.packages = [
+      "FreeTube.FreeTube"
       "RaspberryPiFoundation.RaspberryPiImager"
       "Romanitho.Winget-AutoUpdate"
       "Rufus.Rufus"

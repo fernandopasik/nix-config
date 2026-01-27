@@ -11,5 +11,6 @@
     ./security.nix
     ./spotify.nix
     ./vlc.nix
+    ./ai.nix
   ];
 }

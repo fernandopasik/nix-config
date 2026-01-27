@@ -7,7 +7,13 @@
   ...
 }:
 lib.mkMerge [
-  { environment.systemPackages = with pkgs; [ watchman ]; }
+  {
+    environment.systemPackages = with pkgs; [
+      neovim
+      watchman
+      tree-sitter
+    ];
+  }
 
   (lib.optionalAttrs isDarwin {
     environment.systemPackages = with pkgs; [ utm ];
@@ -17,6 +23,9 @@ lib.mkMerge [
         # IDE
         "visual-studio-code"
         "ghostty"
+        "neovim"
+        "tree-sitter"
+        "tree-sitter-cli"
 
         # Fonts
         "font-jetbrains-mono"

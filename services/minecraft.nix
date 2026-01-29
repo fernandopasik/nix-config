@@ -24,9 +24,6 @@ in
     enable = true;
   };
 
-  nixpkgs.config.allowUnfreePredicate =
-    pkg: builtins.elem (pkg.pname or (pkg.meta.name or "")) [ "minecraft-server" ];
-
   services = {
     minecraft-server = {
       dataDir = "/var/lib/minecraft";

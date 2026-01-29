@@ -21,9 +21,7 @@
       # Tools
       opentofu
       pulumi
+      terraform
     ]
     ++ lib.optional (!isWSL) qemu;
-
-  nixpkgs.config.allowUnfreePredicate =
-    pkg: builtins.elem (pkg.pname or (pkg.meta.name or "")) [ "terraform" ];
 }

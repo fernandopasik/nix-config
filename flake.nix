@@ -44,7 +44,10 @@
           androidModule = android-nixpkgs;
         };
 
-        modules = [ ./machines/uac ];
+        modules = [
+          { nixpkgs.config.allowUnfree = true; }
+          ./machines/uac
+        ];
       };
 
       nixosConfigurations.trantor = nixpkgs.lib.nixosSystem {
@@ -57,7 +60,10 @@
           homeManagerModule = home-manager.nixosModules.home-manager;
         };
 
-        modules = [ ./machines/trantor ];
+        modules = [
+          { nixpkgs.config.allowUnfree = true; }
+          ./machines/trantor
+        ];
       };
 
       darwinConfigurations.Deimos = nix-darwin.lib.darwinSystem {
@@ -71,7 +77,10 @@
           androidModule = android-nixpkgs;
         };
 
-        modules = [ ./machines/deimos ];
+        modules = [
+          { nixpkgs.config.allowUnfree = true; }
+          ./machines/deimos
+        ];
       };
 
       darwinConfigurations.Work = nix-darwin.lib.darwinSystem {
@@ -85,7 +94,10 @@
           androidModule = android-nixpkgs;
         };
 
-        modules = [ ./machines/work ];
+        modules = [
+          { nixpkgs.config.allowUnfree = true; }
+          ./machines/work
+        ];
       };
     };
 }

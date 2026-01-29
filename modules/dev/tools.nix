@@ -23,9 +23,6 @@ lib.mkMerge [
         # IDE
         "visual-studio-code"
         "ghostty"
-        "neovim"
-        "tree-sitter"
-        "tree-sitter-cli"
 
         # Fonts
         "font-ubuntu-mono-nerd-font"

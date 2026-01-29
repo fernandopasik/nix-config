@@ -8,7 +8,7 @@
   ...
 }:
 lib.mkMerge [
-  (lib.optionalAttrs isDarwin { homebrew.casks = [ "docker" ]; })
+  (lib.optionalAttrs isDarwin { homebrew.casks = [ "docker-desktop" ]; })
 
   (lib.optionalAttrs isLinux {
     virtualisation.docker = {

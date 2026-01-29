@@ -10,7 +10,7 @@ on:
 jobs:
   install:
     name: Install Python
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -19,7 +19,7 @@ jobs:
 
   check-format:
     name: Check Format
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs: install
     steps:
       - name: Checkout
@@ -35,7 +35,7 @@ jobs:
 
   lint:
     name: Lint
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs: install
     steps:
       - name: Checkout
@@ -51,7 +51,7 @@ jobs:
 
   check-nix:
     name: Check Nix
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs: install
     steps:
       - name: Checkout

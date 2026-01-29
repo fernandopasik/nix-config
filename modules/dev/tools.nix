@@ -28,7 +28,7 @@ lib.mkMerge [
         "tree-sitter-cli"
 
         # Fonts
-        "nerd-fonts.fira-code"
+        "font-ubuntu-mono-nerd-font"
       ];
 
       masApps = {

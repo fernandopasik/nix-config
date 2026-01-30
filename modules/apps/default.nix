@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./ai.nix
     ./apple.nix
     ./compression.nix
     ./google-chrome.nix
@@ -11,6 +12,5 @@
     ./security.nix
     ./spotify.nix
     ./vlc.nix
-    ./ai.nix
   ];
 }

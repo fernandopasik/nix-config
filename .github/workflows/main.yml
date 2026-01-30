@@ -11,7 +11,7 @@ permissions: read-all
 
 jobs:
   install:
-    name: Install Python
+    name: Install Dependencies
     runs-on: ubuntu-slim
     steps:
       - name: Checkout

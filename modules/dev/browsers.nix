@@ -18,6 +18,7 @@ lib.mkMerge [
 
   (lib.optionalAttrs isLinux {
     environment.systemPackages = with pkgs; [
+      chromium
       firefox
       google-chrome
       microsoft-edge

@@ -35,6 +35,7 @@
       # dev tools
       gcc
       gnumake
+      icu
       jq
     ]
     ++ lib.optionals isLinux [ lsb-release ];

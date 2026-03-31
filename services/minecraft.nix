@@ -13,7 +13,7 @@ let
 
   viaVersionJar = pkgs.fetchurl {
     url = "https://github.com/ViaVersion/ViaVersion/releases/download/5.8.1/ViaVersion-5.8.1.jar";
-    sha256 = "19d4k87kmrc5nw7qnsvmgpkrirp75rljfqwn31dyxi2471d3v6vv";
+    sha256 = "0pa1y4r673gq97540pibvqk14mcny56qm6savkh15fgxn8374giy";
   };
 in
 

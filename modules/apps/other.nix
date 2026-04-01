@@ -16,6 +16,14 @@ lib.mkMerge [
     ];
   })
 
+  (lib.optionalAttrs (isLinux && !isWSL) {
+    environment.systemPackages = with pkgs; [
+      deluge
+      freetube
+      rpi-imager
+    ];
+  })
+
   (lib.optionalAttrs isWSL {
     winget.packages = [
       "DelugeTeam.Deluge"

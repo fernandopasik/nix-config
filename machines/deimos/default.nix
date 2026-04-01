@@ -15,6 +15,8 @@
     ../../modules/system
     ../../modules/shell
     ../../modules/dev
+    ../../modules/apps
+    ../../modules/games
     ../../users/fernando
   ];
 

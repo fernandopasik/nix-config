@@ -19,7 +19,14 @@ lib.mkMerge [
   })
 
   (lib.optionalAttrs (isLinux || isWSL) {
-    environment.systemPackages = with pkgs; [ yubikey-manager ];
+    environment.systemPackages = with pkgs; [
+      yubikey-manager
+      wireshark
+    ];
+  })
+
+  (lib.optionalAttrs (isLinux && !isWSL) {
+    environment.systemPackages = with pkgs; [ yubioath-flutter ];
   })
 
   (lib.optionalAttrs isWSL {

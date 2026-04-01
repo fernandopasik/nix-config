@@ -1,6 +1,7 @@
 {
   config,
   isDarwin,
+  isLinux,
   isWSL,
   lib,
   pkgs,
@@ -22,6 +23,8 @@ lib.mkMerge [
       rm -f /Library/LaunchAgents/com.gog.*
     '';
   })
+
+  (lib.optionalAttrs (isLinux && !isWSL) { environment.systemPackages = with pkgs; [ steam ]; })
 
   (lib.optionalAttrs isWSL {
     winget.packages = [

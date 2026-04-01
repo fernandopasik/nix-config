@@ -8,6 +8,14 @@
     };
   };
 
-  services.getty.autologinUser = null;
-  services.openssh.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    dns = "systemd-resolved";
+  };
+
+  services = {
+    getty.autologinUser = null;
+    openssh.enable = true;
+    resolved.enable = true;
+  };
 }

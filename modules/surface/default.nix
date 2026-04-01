@@ -26,8 +26,6 @@
     sensor.iio.enable = true;
   };
 
-  networking.networkmanager.enable = true;
-
   security.rtkit.enable = true;
 
   services = {

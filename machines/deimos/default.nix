@@ -12,8 +12,6 @@
     ../../modules/linux
     ../../modules/surface
     ../../modules/system
-    ../../modules/shell
-    ../../modules/dev
     ../../users/fernando
   ];
 

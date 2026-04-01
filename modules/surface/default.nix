@@ -25,6 +25,10 @@
     sensor.iio.enable = true;
   };
 
+  networking.networkmanager.enable = true;
+
+  security.rtkit.enable = true;
+
   services = {
     pipewire = {
       alsa.enable = true;
@@ -33,6 +37,8 @@
       enable = true;
       pulse.enable = true;
     };
+
+    printing.enable = true;
 
     pulseaudio.enable = false;
 

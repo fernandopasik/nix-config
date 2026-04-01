@@ -24,7 +24,12 @@ lib.mkMerge [
     '';
   })
 
-  (lib.optionalAttrs (isLinux && !isWSL) { environment.systemPackages = with pkgs; [ steam ]; })
+  (lib.optionalAttrs (isLinux && !isWSL) {
+    environment.systemPackages = with pkgs; [
+      prismlauncher
+      steam
+    ];
+  })
 
   (lib.optionalAttrs isWSL {
     winget.packages = [

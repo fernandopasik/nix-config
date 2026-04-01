@@ -66,7 +66,7 @@
         ];
       };
 
-      darwinConfigurations.Deimos = nix-darwin.lib.darwinSystem {
+      darwinConfigurations.Callisto = nix-darwin.lib.darwinSystem {
         system = "x86_64-darwin";
 
         specialArgs = {
@@ -79,7 +79,7 @@
 
         modules = [
           { nixpkgs.config.allowUnfree = true; }
-          ./machines/deimos
+          ./machines/callisto
         ];
       };
 

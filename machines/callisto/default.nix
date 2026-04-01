@@ -5,7 +5,7 @@
   ...
 }:
 let
-  hostname = "Deimos";
+  hostname = "Callisto";
 in
 {
   imports = [

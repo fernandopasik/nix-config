@@ -37,6 +37,10 @@
       gnumake
       icu
       jq
+
+      # hardware
+      pciutils
+      usbutils
     ]
     ++ lib.optionals isLinux [ lsb-release ];
 }

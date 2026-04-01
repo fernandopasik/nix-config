@@ -9,6 +9,7 @@
 lib.mkMerge [
   {
     environment.systemPackages = with pkgs; [
+      imagemagick
       neovim
       watchman
       tree-sitter

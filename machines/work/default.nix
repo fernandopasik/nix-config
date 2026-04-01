@@ -21,6 +21,7 @@ in
     ../../modules/chat/zoom.nix
     ../../modules/chat/slack.nix
     ../../modules/dev
+    ../../modules/dev/android.nix
     ../../users/fernando
   ];
 

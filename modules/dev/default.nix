@@ -14,6 +14,5 @@
     ./infrastructure.nix
     ./browsers.nix
     ./tools.nix
-    ./android.nix
   ];
 }

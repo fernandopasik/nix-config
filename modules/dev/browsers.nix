@@ -20,6 +20,7 @@ lib.mkMerge [
     environment.systemPackages = with pkgs; [
       chromium
       firefox
+      librewolf
       google-chrome
       microsoft-edge
     ];

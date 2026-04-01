@@ -3,7 +3,7 @@
 let
   geyserJar = pkgs.fetchurl {
     url = "https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot";
-    sha256 = "0y5ngrniy50bwwwf9s80p73h91xcf9qqydqd2q1anbvkrcn0p43b";
+    sha256 = "0nqd4dgrrl6cy2bmmc2hvkr2w5qxv72qqmfg9dbbh8xawr15nchq";
   };
 
   floodgateJar = pkgs.fetchurl {

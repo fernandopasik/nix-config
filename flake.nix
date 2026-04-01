@@ -32,38 +32,40 @@
     }:
 
     {
-      nixosConfigurations.uac = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+      nixosConfigurations = {
+        uac = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
 
-        specialArgs = {
-          isDarwin = false;
-          isLinux = true;
-          isWSL = true;
-          wslModule = nixos-wsl.nixosModules.wsl;
-          homeManagerModule = home-manager.nixosModules.home-manager;
-          androidModule = android-nixpkgs;
+          specialArgs = {
+            isDarwin = false;
+            isLinux = true;
+            isWSL = true;
+            wslModule = nixos-wsl.nixosModules.wsl;
+            homeManagerModule = home-manager.nixosModules.home-manager;
+            androidModule = android-nixpkgs;
+          };
+
+          modules = [
+            { nixpkgs.config.allowUnfree = true; }
+            ./machines/uac
+          ];
         };
 
-        modules = [
-          { nixpkgs.config.allowUnfree = true; }
-          ./machines/uac
-        ];
-      };
+        trantor = nixpkgs.lib.nixosSystem {
+          system = "aarch64-linux";
 
-      nixosConfigurations.trantor = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
+          specialArgs = {
+            isDarwin = false;
+            isLinux = true;
+            isWSL = false;
+            homeManagerModule = home-manager.nixosModules.home-manager;
+          };
 
-        specialArgs = {
-          isDarwin = false;
-          isLinux = true;
-          isWSL = false;
-          homeManagerModule = home-manager.nixosModules.home-manager;
+          modules = [
+            { nixpkgs.config.allowUnfree = true; }
+            ./machines/trantor
+          ];
         };
-
-        modules = [
-          { nixpkgs.config.allowUnfree = true; }
-          ./machines/trantor
-        ];
       };
 
       darwinConfigurations.Callisto = nix-darwin.lib.darwinSystem {

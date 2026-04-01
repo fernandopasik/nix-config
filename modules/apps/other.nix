@@ -10,19 +10,19 @@
 lib.mkMerge [
   (lib.optionalAttrs isDarwin {
     homebrew.casks = [
+      "deluge"
       "freetube"
       "raspberry-pi-imager"
-      "transmission"
     ];
   })
 
   (lib.optionalAttrs isWSL {
     winget.packages = [
+      "DelugeTeam.Deluge"
       "FreeTube.FreeTube"
       "RaspberryPiFoundation.RaspberryPiImager"
       "Romanitho.Winget-AutoUpdate"
       "Rufus.Rufus"
-      "Transmission.Transmission"
     ];
   })
 ]

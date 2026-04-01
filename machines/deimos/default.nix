@@ -13,6 +13,7 @@
     ../../modules/linux/gnome.nix
     ../../modules/surface
     ../../modules/system
+    ../../modules/shell
     ../../users/fernando
   ];
 

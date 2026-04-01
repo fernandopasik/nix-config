@@ -17,13 +17,13 @@ workflow.
 1. Change hostname
 
    ```sh
-   sudo hostname trantor
+   sudo hostname linux
    ```
 
 2. Run flake
 
    ```sh
-   sudo nixos-rebuild switch --refresh --flake github:fernandopasik/nix-config#trantor
+   sudo nixos-rebuild switch --refresh --flake github:fernandopasik/nix-config#linux
    ```
 
 ### MacOS
@@ -41,10 +41,10 @@ workflow.
    sudo chown $(id -nu):$(id -ng) /etc/nix-darwin
    cd /etc/nix-darwin
    nix --extra-experimental-features 'nix-command flakes' flake init -t nix-darwin/master
-   sudo scutil --set HostName "Deimos"
-   sudo scutil --set LocalHostName "Deimos"
-   sudo scutil --set ComputerName "Deimos"
-   sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Deimos"
+   sudo scutil --set HostName "Mac"
+   sudo scutil --set LocalHostName "Mac"
+   sudo scutil --set ComputerName "Mac"
+   sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Mac"
    sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
    sudo nix --extra-experimental-features 'nix-command flakes' run nix-darwin/master#darwin-rebuild -- switch
    ```
@@ -86,7 +86,7 @@ workflow.
 5. Change hostname
 
    ```sh
-   sudo hostname uac
+   sudo hostname wsl
    ```
 
 6. Run flake

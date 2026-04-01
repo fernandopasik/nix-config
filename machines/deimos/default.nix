@@ -10,6 +10,7 @@
     homeManagerModule
     ../../modules/nix
     ../../modules/linux
+    ../../modules/linux/gnome.nix
     ../../modules/surface
     ../../modules/system
     ../../users/fernando

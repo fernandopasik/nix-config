@@ -7,6 +7,7 @@
       url = "github:lnl7/nix-darwin/nix-darwin-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,6 +27,7 @@
       self,
       home-manager,
       nix-darwin,
+      nixos-hardware,
       nixos-wsl,
       nixpkgs,
       android-nixpkgs,
@@ -48,6 +50,23 @@
           modules = [
             { nixpkgs.config.allowUnfree = true; }
             ./machines/uac
+          ];
+        };
+
+        deimos = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+
+          specialArgs = {
+            isDarwin = false;
+            isLinux = true;
+            isWSL = false;
+            homeManagerModule = home-manager.nixosModules.home-manager;
+          };
+
+          modules = [
+            { nixpkgs.config.allowUnfree = true; }
+            nixos-hardware.nixosModules.microsoft-surface-pro-intel
+            ./machines/deimos
           ];
         };
 

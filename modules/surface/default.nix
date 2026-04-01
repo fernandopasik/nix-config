@@ -22,6 +22,7 @@
 
   hardware = {
     enableRedistributableFirmware = true;
+    graphics.enable = true;
     sensor.iio.enable = true;
   };
 

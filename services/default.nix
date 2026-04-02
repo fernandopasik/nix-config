@@ -6,5 +6,6 @@
     ./grafana.nix
     ./minecraft.nix
     ./prometheus.nix
+    ./searx.nix
   ];
 }

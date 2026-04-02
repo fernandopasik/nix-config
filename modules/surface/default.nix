@@ -1,7 +1,24 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   boot = {
+    extraModulePackages = [ ];
+    initrd = {
+      availableKernelModules = [
+        "xhci_pci"
+        "nvme"
+        "usb_storage"
+        "sd_mod"
+      ];
+      kernelModules = [ ];
+    };
+    kernelModules = [ "kvm-intel" ];
+
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
@@ -11,6 +28,7 @@
   environment.systemPackages = with pkgs; [
     libinput
     evtest
+    surface-control
   ];
 
   fileSystems."/" = {
@@ -26,14 +44,20 @@
   swapDevices = [ { device = "/dev/disk/by-label/swap"; } ];
 
   hardware = {
+    cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     enableRedistributableFirmware = true;
     graphics.enable = true;
+    microsoft-surface.kernelVersion = "longterm";
     sensor.iio.enable = true;
   };
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   security.rtkit.enable = true;
 
   services = {
+    libinput.enable = true;
+
     pipewire = {
       alsa.enable = true;
       alsa.support32Bit = true;
@@ -41,11 +65,7 @@
       enable = true;
       pulse.enable = true;
     };
-
-    printing.enable = true;
-
     pulseaudio.enable = false;
-
-    libinput.enable = true;
+    thermald.enable = true;
   };
 }

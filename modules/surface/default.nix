@@ -8,6 +8,11 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+    libinput
+    evtest
+  ];
+
   fileSystems."/" = {
     device = "/dev/disk/by-label/root";
     fsType = "ext4";

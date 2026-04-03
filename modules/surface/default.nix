@@ -46,7 +46,10 @@
   hardware = {
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     enableRedistributableFirmware = true;
-    graphics.enable = true;
+    graphics = {
+      enable = true;
+      extraPackages = with pkgs; [ intel-media-driver ];
+    };
     microsoft-surface.kernelVersion = "longterm";
     sensor.iio.enable = true;
   };

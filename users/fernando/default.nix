@@ -62,6 +62,10 @@ in
               ln -sf "$DOTFILES_DIR/.starship.toml" "$HOME/.config/starship.toml"
               mkdir -p "$HOME/.config/gh"
               ln -sf "$DOTFILES_DIR/.ghconfig.yml" "$HOME/.config/gh/config.yml"
+              mkdir -p "$HOME/.config/nvim"
+              ln -sf "$DOTFILES_DIR/nvim/init.lua" "$HOME/.config/nvim/init.lua"
+              ln -sf "$DOTFILES_DIR/nvim/stylua.toml" "$HOME/.config/nvim/stylua.toml"
+              ln -sf "$DOTFILES_DIR/nvim/lua" "$HOME/.config/nvim/lua"
             '';
           }
           (lib.optionalAttrs isDarwin {

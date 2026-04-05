@@ -42,5 +42,11 @@
       pciutils
       usbutils
     ]
-    ++ lib.optionals isLinux [ lsb-release ];
+    ++ lib.optionals isLinux [
+      lsb-release
+
+      # sandboxing
+      bubblewrap
+      socat
+    ];
 }

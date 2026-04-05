@@ -50,5 +50,6 @@
 
     [ -x "$(command -v pip-upgrader)" ] || pipx install pip-upgrader
     [ -x "$(command -v poetry)" ] || pipx install poetry
+    [ -x "$(command -v uv)" ] || pipx install uv
   '';
 }

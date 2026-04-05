@@ -28,6 +28,7 @@ lib.mkMerge [
     environment.systemPackages = with pkgs; [
       lutris
       prismlauncher
+      protonup-qt
       steam
       vulkan-tools
       wineWowPackages.stable

@@ -26,8 +26,12 @@ lib.mkMerge [
 
   (lib.optionalAttrs (isLinux && !isWSL) {
     environment.systemPackages = with pkgs; [
+      lutris
       prismlauncher
       steam
+      vulkan-tools
+      wineWowPackages.stable
+      winetricks
     ];
 
     hardware.graphics = {

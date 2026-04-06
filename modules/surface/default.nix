@@ -6,6 +6,14 @@
   ...
 }:
 
+let
+  acpiOverride = pkgs.runCommand "acpi-override" { } ''
+    mkdir -p $out/kernel/firmware/acpi
+    cp ${./dsdt.aml} $out/kernel/firmware/acpi/dsdt.aml
+    cd $out
+    find kernel | ${pkgs.cpio}/bin/cpio -H newc --create > $out/acpi_override
+  '';
+in
 {
   imports = [ hardwareModule.nixosModules.microsoft-surface-pro-intel ];
 
@@ -19,6 +27,7 @@
         "sd_mod"
       ];
       kernelModules = [ ];
+      prepend = [ "${acpiOverride}/acpi_override" ];
     };
     kernelModules = [ "kvm-intel" ];
     kernelParams = [ "mem_sleep_default=deep" ];

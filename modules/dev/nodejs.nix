@@ -32,7 +32,7 @@
         chmod 775 "$NPM_CONFIG_PREFIX"
 
         echo "📦 Installing npm global packages"
-        ${pkgs.nodejs_24}/bin/npm i -g --prefix "$NPM_CONFIG_PREFIX" npm npm-check-updates
+        ${pkgs.nodejs_24}/bin/npm i -g --no-fund --prefix "$NPM_CONFIG_PREFIX" npm npm-check-updates
       fi
     '';
   };

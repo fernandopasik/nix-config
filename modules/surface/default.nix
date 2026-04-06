@@ -23,6 +23,7 @@ in
       availableKernelModules = [
         "xhci_pci"
         "nvme"
+        "uas"
         "usb_storage"
         "sd_mod"
       ];

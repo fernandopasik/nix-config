@@ -60,12 +60,12 @@
             isDarwin = false;
             isLinux = true;
             isWSL = false;
+            hardwareModule = nixos-hardware;
             homeManagerModule = home-manager.nixosModules.home-manager;
           };
 
           modules = [
             { nixpkgs.config.allowUnfree = true; }
-            nixos-hardware.nixosModules.microsoft-surface-pro-intel
             ./machines/deimos
           ];
         };

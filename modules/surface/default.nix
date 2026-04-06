@@ -1,11 +1,14 @@
 {
   config,
+  hardwareModule,
   lib,
   pkgs,
   ...
 }:
 
 {
+  imports = [ hardwareModule.nixosModules.microsoft-surface-pro-intel ];
+
   boot = {
     extraModulePackages = [ ];
     initrd = {
@@ -18,6 +21,7 @@
       kernelModules = [ ];
     };
     kernelModules = [ "kvm-intel" ];
+    kernelParams = [ "mem_sleep_default=deep" ];
 
     loader = {
       systemd-boot.enable = true;

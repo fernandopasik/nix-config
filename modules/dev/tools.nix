@@ -1,6 +1,7 @@
 {
   config,
   isDarwin,
+  isLinux,
   isWSL,
   lib,
   pkgs,
@@ -9,6 +10,7 @@
 lib.mkMerge [
   {
     environment.systemPackages = with pkgs; [
+      claude-code
       imagemagick
       neovim
       watchman

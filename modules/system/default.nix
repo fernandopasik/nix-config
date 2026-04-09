@@ -37,6 +37,7 @@
       gnumake
       icu
       jq
+      stow
 
       # hardware
       pciutils

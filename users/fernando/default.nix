@@ -63,7 +63,7 @@ in
               mkdir -p "$HOME/.claude"
               ln -sf "$DOTFILES_DIR/.claude/settings.json" "$HOME/.claude/settings.json"
               mkdir -p "$HOME/.config/gh"
-              ln -sf "$DOTFILES_DIR/.ghconfig.yml" "$HOME/.config/gh/config.yml"
+              ln -sf "$DOTFILES_DIR/gh/config.yml" "$HOME/.config/gh/config.yml"
               mkdir -p "$HOME/.config/nvim"
               ln -sf "$DOTFILES_DIR/nvim/init.lua" "$HOME/.config/nvim/init.lua"
               ln -sf "$DOTFILES_DIR/nvim/stylua.toml" "$HOME/.config/nvim/stylua.toml"

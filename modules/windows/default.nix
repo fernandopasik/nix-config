@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  isWSL,
+  lib,
+  ...
+}:
 let
   names = builtins.map (pkg: if builtins.isString pkg then pkg else pkg.name) config.winget.packages;
   installs = lib.concatStringsSep "\n" (
@@ -55,7 +60,7 @@ in
     description = "List of Winget packages to install via systemd oneshot. Each item can be a string (package ID) or an attrset with name and optional location.";
   };
 
-  config.systemd.services.winget-install = lib.mkIf (config.winget.packages != [ ]) {
+  config.systemd.services.winget-install = lib.mkIf (isWSL && config.winget.packages != [ ]) {
     description = "Install winget packages for Windows";
     after = [ "network.target" ];
     wants = [ "network.target" ];

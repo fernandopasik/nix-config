@@ -15,15 +15,17 @@ lib.mkMerge (
       with sdkPkgs;
       [
         cmdline-tools-latest
-        platform-tools-36
+        platform-tools
         emulator
 
         # Platforms
         platforms-android-36
+        platforms-android-37-0
         ndk-27-3-13750724
 
         # Build tools
         build-tools-36-0-0
+        build-tools-37-0-0
         cmake-3-31-6
       ]
       ++ lib.optionals (pkgs.system == "aarch64-darwin") [

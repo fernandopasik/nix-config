@@ -50,25 +50,11 @@ in
                 echo "🧰 Updating dotfiles in $DOTFILES_DIR"
                 git -C "$DOTFILES_DIR" pull --rebase
               fi
-
               if [ ! -f "$HOME/.gitconfig.local" ]; then
                 echo "🔀 Creating .gitconfig.local"
                 echo -e "${gitconfigLocalContent}" > "$HOME/.gitconfig.local"
               fi
-
-              ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
-              ln -sf "$DOTFILES_DIR/.npmrc" "$HOME/.npmrc"
-              mkdir -p "$HOME/.config"
-              ln -sf "$DOTFILES_DIR/.starship.toml" "$HOME/.config/starship.toml"
-              mkdir -p "$HOME/.claude"
-              ln -sf "$DOTFILES_DIR/.claude/settings.json" "$HOME/.claude/settings.json"
-              mkdir -p "$HOME/.config/gh"
-              ln -sf "$DOTFILES_DIR/gh/config.yml" "$HOME/.config/gh/config.yml"
-              mkdir -p "$HOME/.config/nvim"
-              ln -sf "$DOTFILES_DIR/nvim/init.lua" "$HOME/.config/nvim/init.lua"
-              ln -sf "$DOTFILES_DIR/nvim/stylua.toml" "$HOME/.config/nvim/stylua.toml"
-              rm -rf "$HOME/.config/nvim/lua"
-              ln -sf "$DOTFILES_DIR/nvim/lua" "$HOME/.config/nvim/lua"
+              cd $DOTFILES_DIR && ${pkgs.stow}/bin/stow .
             '';
           }
           (lib.optionalAttrs isDarwin {

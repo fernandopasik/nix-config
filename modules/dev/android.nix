@@ -15,7 +15,7 @@ lib.mkMerge (
       with sdkPkgs;
       [
         cmdline-tools-latest
-        platform-tools
+        platform-tools-36
         emulator
 
         # Platforms

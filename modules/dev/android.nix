@@ -20,11 +20,11 @@ lib.mkMerge (
 
         # Platforms
         platforms-android-36
-        ndk-27-1-12297006
+        ndk-27-3-13750724
 
         # Build tools
         build-tools-36-0-0
-        cmake-3-22-1
+        cmake-3-31-6
       ]
       ++ lib.optionals (pkgs.system == "aarch64-darwin") [
         # System images (emulators)

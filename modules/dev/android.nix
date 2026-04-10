@@ -19,21 +19,25 @@ lib.mkMerge (
         emulator
 
         # Platforms
+        platforms-android-35
         platforms-android-36
-        platforms-android-37-0
-        ndk-27-3-13750724
+        ndk-26-1-10909125
+        ndk-27-1-12297006
 
         # Build tools
+        build-tools-34-0-0
+        build-tools-35-0-0
         build-tools-36-0-0
-        build-tools-37-0-0
-        cmake-3-31-6
+        cmake-3-22-1
       ]
       ++ lib.optionals (pkgs.system == "aarch64-darwin") [
         # System images (emulators)
+        system-images-android-35-google-apis-arm64-v8a
         system-images-android-36-google-apis-arm64-v8a
       ]
       ++ lib.optionals (pkgs.system == "x86_64-linux" || pkgs.system == "x86_64-darwin") [
         # System images (emulators)
+        system-images-android-35-google-apis-x86-64
         system-images-android-36-google-apis-x86-64
       ]
     );

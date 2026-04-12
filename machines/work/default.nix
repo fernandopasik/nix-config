@@ -43,5 +43,8 @@ in
     primaryUser = "fernando";
   };
 
-  apps = [ "google-drive" ];
+  apps = [
+    "google-drive"
+    "slack"
+  ];
 }

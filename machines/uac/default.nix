@@ -29,4 +29,10 @@
     enable = true;
     package = pkgs.nix-ld;
   };
+
+  apps = [
+    "discord"
+    "google-drive"
+    "spotify"
+  ];
 }

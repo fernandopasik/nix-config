@@ -39,5 +39,9 @@ in
     primaryUser = "fernando";
   };
 
-  apps = [ "spotify" ];
+  apps = [
+    "google-drive"
+    "slack"
+    "spotify"
+  ];
 }

@@ -28,5 +28,8 @@
     package = pkgs.nix-ld;
   };
 
-  apps = [ "spotify" ];
+  apps = [
+    "google-drive"
+    "spotify"
+  ];
 }

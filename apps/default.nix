@@ -7,7 +7,9 @@
   };
 
   imports = [
+    ./discord.nix
     ./google-drive.nix
+    ./slack.nix
     ./spotify.nix
   ];
 }

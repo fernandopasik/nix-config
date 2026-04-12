@@ -17,8 +17,6 @@ in
     ../../modules/shell
     ../../modules/apps/google-chrome.nix
     ../../modules/apps/compression.nix
-    ../../modules/chat/zoom.nix
-    ../../modules/chat/teams.nix
     ../../modules/dev
     ../../modules/dev/android.nix
     ../../users/fernando
@@ -45,5 +43,7 @@ in
     "google-drive"
     "notion"
     "slack"
+    "teams"
+    "zoom"
   ];
 }

@@ -31,5 +31,6 @@
   apps = [
     "google-drive"
     "spotify"
+    "zoom"
   ];
 }

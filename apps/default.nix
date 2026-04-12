@@ -12,5 +12,7 @@
     ./notion.nix
     ./slack.nix
     ./spotify.nix
+    ./teams.nix
+    ./zoom.nix
   ];
 }

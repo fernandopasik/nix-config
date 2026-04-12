@@ -8,6 +8,8 @@
   ...
 }:
 lib.mkMerge [
+  (lib.optionalAttrs (!isWSL) { environment.systemPackages = with pkgs; [ steam ]; })
+
   (lib.optionalAttrs isDarwin {
     homebrew.casks = [
       "battle-net"
@@ -15,7 +17,6 @@ lib.mkMerge [
       "gog-galaxy"
       "minecraft"
       "openemu@experimental"
-      "steam"
     ];
 
     system.activationScripts.postActivation.text = ''
@@ -29,7 +30,6 @@ lib.mkMerge [
       lutris
       prismlauncher
       protonup-qt
-      steam
       vulkan-tools
       wineWowPackages.stable
       winetricks

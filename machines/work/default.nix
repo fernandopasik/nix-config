@@ -17,7 +17,6 @@ in
     ../../modules/shell
     ../../modules/apps/google-chrome.nix
     ../../modules/apps/compression.nix
-    ../../modules/apps/notion.nix
     ../../modules/chat/zoom.nix
     ../../modules/chat/teams.nix
     ../../modules/dev
@@ -44,6 +43,7 @@ in
 
   apps = [
     "google-drive"
+    "notion"
     "slack"
   ];
 }

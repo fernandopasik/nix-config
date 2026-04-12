@@ -40,6 +40,7 @@
 
           specialArgs = {
             isDarwin = false;
+            isHeadless = true;
             isLinux = true;
             isWSL = true;
             wslModule = nixos-wsl.nixosModules.wsl;
@@ -58,6 +59,7 @@
 
           specialArgs = {
             isDarwin = false;
+            isHeadless = false;
             isLinux = true;
             isWSL = false;
             hardwareModule = nixos-hardware;
@@ -75,6 +77,7 @@
 
           specialArgs = {
             isDarwin = false;
+            isHeadless = true;
             isLinux = true;
             isWSL = false;
             homeManagerModule = home-manager.nixosModules.home-manager;
@@ -92,6 +95,7 @@
 
         specialArgs = {
           isDarwin = true;
+          isHeadless = false;
           isLinux = false;
           isWSL = false;
           homeManagerModule = home-manager.darwinModules.home-manager;
@@ -109,6 +113,7 @@
 
         specialArgs = {
           isDarwin = true;
+          isHeadless = false;
           isLinux = false;
           isWSL = false;
           homeManagerModule = home-manager.darwinModules.home-manager;

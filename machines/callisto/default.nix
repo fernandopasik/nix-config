@@ -10,6 +10,7 @@ in
 {
   imports = [
     homeManagerModule
+    ../../apps
     ../../modules/nix
     ../../modules/macos
     ../../modules/system
@@ -37,4 +38,6 @@ in
 
     primaryUser = "fernando";
   };
+
+  apps = [ "spotify" ];
 }

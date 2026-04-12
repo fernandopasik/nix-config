@@ -8,6 +8,7 @@
 {
   imports = [
     homeManagerModule
+    ../../apps
     ../../modules/nix
     ../../modules/linux
     ../../modules/linux/gnome.nix
@@ -26,4 +27,6 @@
     enable = true;
     package = pkgs.nix-ld;
   };
+
+  apps = [ "spotify" ];
 }

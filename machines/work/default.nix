@@ -16,7 +16,6 @@ in
     ../../modules/system
     ../../modules/shell
     ../../modules/apps/google-chrome.nix
-    ../../modules/apps/google-drive.nix
     ../../modules/apps/compression.nix
     ../../modules/apps/notion.nix
     ../../modules/chat/zoom.nix

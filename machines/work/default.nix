@@ -20,6 +20,7 @@ in
     ../../modules/apps/notion.nix
     ../../modules/chat/zoom.nix
     ../../modules/chat/slack.nix
+    ../../modules/chat/teams.nix
     ../../modules/dev
     ../../modules/dev/android.nix
     ../../users/fernando

@@ -9,6 +9,7 @@
   imports = [
     ./discord.nix
     ./google-drive.nix
+    ./notion.nix
     ./slack.nix
     ./spotify.nix
   ];

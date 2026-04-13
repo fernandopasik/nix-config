@@ -29,8 +29,10 @@
   };
 
   apps = [
+    "chatgpt"
+    "claude"
+    "gemini"
     "google-drive"
     "spotify"
-    "zoom"
   ];
 }

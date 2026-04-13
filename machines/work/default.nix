@@ -40,6 +40,9 @@ in
   };
 
   apps = [
+    "chatgpt"
+    "claude"
+    "gemini"
     "google-drive"
     "notion"
     "slack"

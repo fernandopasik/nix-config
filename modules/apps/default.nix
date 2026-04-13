@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./ai.nix
     ./apple.nix
     ./compression.nix
     ./google-chrome.nix

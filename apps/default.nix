@@ -7,7 +7,10 @@
   };
 
   imports = [
+    ./chatgpt.nix
+    ./claude.nix
     ./discord.nix
+    ./gemini.nix
     ./google-drive.nix
     ./notion.nix
     ./slack.nix

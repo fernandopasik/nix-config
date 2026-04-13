@@ -31,6 +31,8 @@
   };
 
   apps = [
+    "chatgpt"
+    "claude"
     "discord"
     "google-drive"
     "spotify"

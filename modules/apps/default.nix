@@ -8,6 +8,5 @@
     ./hardware.nix
     ./other.nix
     ./security.nix
-    ./vlc.nix
   ];
 }

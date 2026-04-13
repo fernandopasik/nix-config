@@ -36,5 +36,6 @@
     "discord"
     "google-drive"
     "spotify"
+    "vlc"
   ];
 }

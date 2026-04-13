@@ -34,5 +34,6 @@
     "gemini"
     "google-drive"
     "spotify"
+    "vlc"
   ];
 }

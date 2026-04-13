@@ -17,5 +17,6 @@
     ./spotify.nix
     ./teams.nix
     ./zoom.nix
+    ./vlc.nix
   ];
 }

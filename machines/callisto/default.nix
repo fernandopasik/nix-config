@@ -47,5 +47,6 @@ in
     "slack"
     "spotify"
     "zoom"
+    "vlc"
   ];
 }

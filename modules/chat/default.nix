@@ -7,5 +7,5 @@
 }:
 
 {
-  imports = lib.optionals isDarwin [ ./apple.nix ] ++ [ ./signal.nix ];
+  imports = lib.optionals isDarwin [ ./apple.nix ];
 }

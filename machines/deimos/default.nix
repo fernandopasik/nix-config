@@ -34,6 +34,7 @@
     "gemini"
     "google-chrome"
     "google-drive"
+    "signal"
     "spotify"
     "vlc"
     "whatsapp"

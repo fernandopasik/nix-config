@@ -36,6 +36,7 @@
     "discord"
     "google-chrome"
     "google-drive"
+    "signal"
     "spotify"
     "vlc"
     "whatsapp"

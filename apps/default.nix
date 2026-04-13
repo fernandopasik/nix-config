@@ -15,6 +15,7 @@
     ./google-drive.nix
     ./notion.nix
     ./slack.nix
+    ./signal.nix
     ./spotify.nix
     ./teams.nix
     ./vlc.nix

@@ -41,6 +41,7 @@ in
   apps = [
     "apple-facetime"
     "apple-messages"
+    "apple-notes"
     "chatgpt"
     "claude"
     "gemini"

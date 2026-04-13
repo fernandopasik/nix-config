@@ -39,6 +39,7 @@ in
   };
 
   apps = [
+    "apple-notes"
     "chatgpt"
     "claude"
     "gemini"

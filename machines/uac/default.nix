@@ -30,6 +30,8 @@
   };
 
   apps = [
+    "apple-devices"
+    "apple-icloud"
     "chatgpt"
     "claude"
     "discord"

@@ -39,12 +39,7 @@
         wvous-tl-corner = 10;
         wvous-tr-corner = 1;
 
-        persistent-apps = [
-          "/System/Applications/Apps.app"
-          "/System/Applications/Notes.app"
-          "/System/Applications/Facetime.app"
-          "/System/Applications/Messages.app"
-        ];
+        persistent-apps = [ "/System/Applications/Apps.app" ];
       };
     };
   };

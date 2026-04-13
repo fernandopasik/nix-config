@@ -42,6 +42,8 @@
         persistent-apps = [
           "/System/Applications/Apps.app"
           "/System/Applications/Notes.app"
+          "/System/Applications/Facetime.app"
+          "/System/Applications/Messages.app"
         ];
       };
     };

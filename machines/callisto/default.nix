@@ -18,7 +18,6 @@ in
     ../../modules/apps
     ../../modules/dev
     ../../modules/games
-    ../../modules/chat
     ../../users/fernando
   ];
 
@@ -40,6 +39,8 @@ in
   };
 
   apps = [
+    "apple-facetime"
+    "apple-messages"
     "chatgpt"
     "claude"
     "gemini"

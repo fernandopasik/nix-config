@@ -7,6 +7,8 @@
   };
 
   imports = [
+    ./apple-facetime.nix
+    ./apple-messages.nix
     ./chatgpt.nix
     ./claude.nix
     ./discord.nix

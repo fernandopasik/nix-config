@@ -15,7 +15,6 @@ in
     ../../modules/macos
     ../../modules/system
     ../../modules/shell
-    ../../modules/apps/google-chrome.nix
     ../../modules/apps/compression.nix
     ../../modules/dev
     ../../modules/dev/android.nix

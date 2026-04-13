@@ -42,6 +42,7 @@
     "signal"
     "spotify"
     "vlc"
+    "wireshark"
     "yubikey"
     "whatsapp"
   ];

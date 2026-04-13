@@ -30,6 +30,7 @@
     ./teams.nix
     ./vlc.nix
     ./whatsapp.nix
+    ./wireshark.nix
     ./yubikey.nix
     ./zoom.nix
   ];

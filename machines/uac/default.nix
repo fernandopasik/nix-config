@@ -46,6 +46,7 @@
     "spotify"
     "vlc"
     "whatsapp"
+    "wireshark"
     "yubikey"
   ];
 }

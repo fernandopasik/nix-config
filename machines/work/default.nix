@@ -51,6 +51,7 @@ in
     "notion"
     "slack"
     "teams"
+    "wireshark"
     "yubikey"
     "zoom"
   ];

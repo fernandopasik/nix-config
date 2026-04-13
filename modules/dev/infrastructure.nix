@@ -19,6 +19,7 @@
       minikube
 
       # Tools
+      awscli2
       opentofu
       pulumi
       terraform

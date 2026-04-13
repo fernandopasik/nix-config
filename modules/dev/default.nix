@@ -12,7 +12,6 @@
     ./languages.nix
     ./docker.nix
     ./infrastructure.nix
-    ./browsers.nix
     ./tools.nix
   ];
 }

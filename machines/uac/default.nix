@@ -34,6 +34,7 @@
     "apple-icloud"
     "chatgpt"
     "claude"
+    "chromium"
     "discord"
     "firefox"
     "freetube"

@@ -13,6 +13,7 @@
     ./apple-messages.nix
     ./apple-notes.nix
     ./chatgpt.nix
+    ./chromium.nix
     ./claude.nix
     ./discord.nix
     ./firefox.nix

@@ -42,5 +42,6 @@
     "spotify"
     "vlc"
     "whatsapp"
+    "yubikey"
   ];
 }

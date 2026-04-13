@@ -48,6 +48,7 @@ in
     "notion"
     "slack"
     "teams"
+    "yubikey"
     "zoom"
   ];
 }

@@ -38,6 +38,7 @@
     "signal"
     "spotify"
     "vlc"
+    "yubikey"
     "whatsapp"
   ];
 }

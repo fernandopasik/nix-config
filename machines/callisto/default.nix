@@ -51,6 +51,7 @@ in
     "spotify"
     "vlc"
     "whatsapp"
+    "yubikey"
     "zoom"
   ];
 }

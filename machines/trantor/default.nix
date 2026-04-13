@@ -25,4 +25,6 @@
     enable = true;
     package = pkgs.nix-ld;
   };
+
+  apps = [ "yubikey" ];
 }

@@ -12,29 +12,16 @@ lib.mkMerge [
     homebrew.casks = [
       "1password"
       "nordvpn"
-      "yubico-authenticator"
-      "yubico-yubikey-manager"
       "wireshark-app"
     ];
   })
 
-  (lib.optionalAttrs (isLinux || isWSL) {
-    environment.systemPackages = with pkgs; [
-      yubikey-manager
-      wireshark
-    ];
-  })
-
-  (lib.optionalAttrs (isLinux && !isWSL) {
-    environment.systemPackages = with pkgs; [ yubioath-flutter ];
-  })
+  (lib.optionalAttrs (isLinux || isWSL) { environment.systemPackages = with pkgs; [ wireshark ]; })
 
   (lib.optionalAttrs isWSL {
     winget.packages = [
       "AgileBits.1Password"
       "NordSecurity.NordVPN"
-      "Yubico.Authenticator"
-      "Yubico.YubiKeyManagerCLI"
       "WiresharkFoundation.Wireshark"
     ];
   })

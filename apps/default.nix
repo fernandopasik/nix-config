@@ -20,12 +20,13 @@
     ./google-chrome.nix
     ./google-drive.nix
     ./notion.nix
-    ./slack.nix
     ./signal.nix
+    ./slack.nix
     ./spotify.nix
     ./teams.nix
     ./vlc.nix
     ./whatsapp.nix
+    ./yubikey.nix
     ./zoom.nix
   ];
 }

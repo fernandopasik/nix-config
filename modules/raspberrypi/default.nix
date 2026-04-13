@@ -10,7 +10,10 @@
     kernelPackages = pkgs.linuxPackages_rpi4;
   };
 
-  environment.systemPackages = [ pkgs.raspberrypi-eeprom ];
+  environment.systemPackages = with pkgs; [
+    raspberrypi-eeprom
+    raspberrypifw
+  ];
 
   fileSystems."/firmware" = {
     device = "/dev/disk/by-label/FIRMWARE";

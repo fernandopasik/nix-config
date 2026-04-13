@@ -42,6 +42,7 @@ in
     "apple-notes"
     "chatgpt"
     "claude"
+    "firefox"
     "gemini"
     "google-chrome"
     "google-drive"

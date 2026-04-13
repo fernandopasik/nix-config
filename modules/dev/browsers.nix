@@ -10,7 +10,6 @@
 lib.mkMerge [
   (lib.optionalAttrs isDarwin {
     homebrew.casks = [
-      "firefox"
       "librewolf"
       "microsoft-edge"
     ];
@@ -19,7 +18,6 @@ lib.mkMerge [
   (lib.optionalAttrs isLinux {
     environment.systemPackages = with pkgs; [
       chromium
-      firefox
       librewolf
       google-chrome
       microsoft-edge
@@ -30,7 +28,6 @@ lib.mkMerge [
     winget.packages = [
       "LibreWolf.LibreWolf"
       "Microsoft.Edge"
-      "Mozilla.Firefox"
     ];
   })
 ]

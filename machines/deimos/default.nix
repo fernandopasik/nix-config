@@ -31,6 +31,7 @@
   apps = [
     "chatgpt"
     "claude"
+    "firefox"
     "freetube"
     "gemini"
     "google-chrome"

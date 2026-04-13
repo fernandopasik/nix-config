@@ -35,6 +35,7 @@
     "chatgpt"
     "claude"
     "discord"
+    "firefox"
     "freetube"
     "google-chrome"
     "google-drive"

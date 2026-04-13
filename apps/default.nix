@@ -15,6 +15,7 @@
     ./chatgpt.nix
     ./claude.nix
     ./discord.nix
+    ./firefox.nix
     ./freetube.nix
     ./gemini.nix
     ./google-chrome.nix

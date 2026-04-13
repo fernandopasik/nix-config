@@ -13,7 +13,7 @@ in
     lib.mkMerge [
       (lib.optionalAttrs isDarwin {
         homebrew.casks = [ "google-gemini" ];
-        system.defaults.dock.persistent-apps = [ "/Applications/Google Gemini.app" ];
+        system.defaults.dock.persistent-apps = [ "/Applications/Gemini.app" ];
       })
     ]
   );

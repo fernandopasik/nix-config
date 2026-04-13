@@ -37,6 +37,7 @@
     "google-chrome"
     "google-drive"
     "librewolf"
+    "microsoft-edge"
     "signal"
     "spotify"
     "vlc"

@@ -21,6 +21,7 @@
     ./google-chrome.nix
     ./google-drive.nix
     ./librewolf.nix
+    ./microsoft-edge.nix
     ./notion.nix
     ./signal.nix
     ./slack.nix

@@ -47,6 +47,7 @@ in
     "google-chrome"
     "google-drive"
     "librewolf"
+    "microsoft-edge"
     "notion"
     "slack"
     "teams"

@@ -8,14 +8,5 @@
   ...
 }:
 lib.mkMerge [
-  (lib.optionalAttrs isDarwin { homebrew.casks = [ "microsoft-edge" ]; })
-
-  (lib.optionalAttrs isLinux {
-    environment.systemPackages = with pkgs; [
-      chromium
-      microsoft-edge
-    ];
-  })
-
-  (lib.optionalAttrs isWSL { winget.packages = [ "Microsoft.Edge" ]; })
+  (lib.optionalAttrs isLinux { environment.systemPackages = with pkgs; [ chromium ]; })
 ]

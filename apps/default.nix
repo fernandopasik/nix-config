@@ -11,12 +11,13 @@
     ./claude.nix
     ./discord.nix
     ./gemini.nix
+    ./google-chrome.nix
     ./google-drive.nix
     ./notion.nix
     ./slack.nix
     ./spotify.nix
     ./teams.nix
-    ./zoom.nix
     ./vlc.nix
+    ./zoom.nix
   ];
 }

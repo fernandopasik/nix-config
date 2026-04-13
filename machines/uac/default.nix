@@ -34,6 +34,7 @@
     "chatgpt"
     "claude"
     "discord"
+    "google-chrome"
     "google-drive"
     "spotify"
     "vlc"

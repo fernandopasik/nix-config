@@ -43,6 +43,7 @@ in
     "chatgpt"
     "claude"
     "gemini"
+    "google-chrome"
     "google-drive"
     "notion"
     "slack"

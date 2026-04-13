@@ -41,7 +41,6 @@
 
         persistent-apps = [
           "/System/Applications/Apps.app"
-          "/Applications/Google Chrome.app"
           "/System/Applications/Notes.app"
         ];
       };

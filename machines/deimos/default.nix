@@ -32,6 +32,7 @@
     "chatgpt"
     "claude"
     "gemini"
+    "google-chrome"
     "google-drive"
     "spotify"
     "vlc"

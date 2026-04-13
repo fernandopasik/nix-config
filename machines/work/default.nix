@@ -46,6 +46,7 @@ in
     "gemini"
     "google-chrome"
     "google-drive"
+    "librewolf"
     "notion"
     "slack"
     "teams"

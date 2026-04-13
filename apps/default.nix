@@ -20,6 +20,7 @@
     ./gemini.nix
     ./google-chrome.nix
     ./google-drive.nix
+    ./librewolf.nix
     ./notion.nix
     ./signal.nix
     ./slack.nix

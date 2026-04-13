@@ -39,6 +39,7 @@
     "freetube"
     "google-chrome"
     "google-drive"
+    "librewolf"
     "signal"
     "spotify"
     "vlc"

@@ -7,11 +7,15 @@
   };
 
   imports = [
+    ./apple-devices.nix
     ./apple-facetime.nix
+    ./apple-icloud.nix
     ./apple-messages.nix
+    ./apple-notes.nix
     ./chatgpt.nix
     ./claude.nix
     ./discord.nix
+    ./freetube.nix
     ./gemini.nix
     ./google-chrome.nix
     ./google-drive.nix

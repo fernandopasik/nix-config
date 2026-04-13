@@ -36,5 +36,6 @@
     "google-drive"
     "spotify"
     "vlc"
+    "whatsapp"
   ];
 }

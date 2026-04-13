@@ -7,8 +7,5 @@
 }:
 
 {
-  imports = lib.optionals isDarwin [ ./apple.nix ] ++ [
-    ./signal.nix
-    ./whatsapp.nix
-  ];
+  imports = lib.optionals isDarwin [ ./apple.nix ] ++ [ ./signal.nix ];
 }

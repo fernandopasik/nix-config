@@ -47,7 +47,8 @@ in
     "google-drive"
     "slack"
     "spotify"
-    "zoom"
     "vlc"
+    "whatsapp"
+    "zoom"
   ];
 }

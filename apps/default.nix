@@ -18,6 +18,7 @@
     ./spotify.nix
     ./teams.nix
     ./vlc.nix
+    ./whatsapp.nix
     ./zoom.nix
   ];
 }

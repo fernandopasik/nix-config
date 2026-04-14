@@ -8,17 +8,7 @@
   ...
 }:
 lib.mkMerge [
-  (lib.optionalAttrs isDarwin {
-    homebrew.casks = [
-      "1password"
-      "nordvpn"
-    ];
-  })
+  (lib.optionalAttrs isDarwin { homebrew.casks = [ "1password" ]; })
 
-  (lib.optionalAttrs isWSL {
-    winget.packages = [
-      "AgileBits.1Password"
-      "NordSecurity.NordVPN"
-    ];
-  })
+  (lib.optionalAttrs isWSL { winget.packages = [ "AgileBits.1Password" ]; })
 ]

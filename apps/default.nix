@@ -23,6 +23,7 @@
     ./google-drive.nix
     ./librewolf.nix
     ./microsoft-edge.nix
+    ./nordvpn.nix
     ./notion.nix
     ./raspberry-pi-imager.nix
     ./signal.nix

@@ -42,6 +42,7 @@
     "google-drive"
     "librewolf"
     "microsoft-edge"
+    "nordvpn"
     "raspberry-pi-imager"
     "signal"
     "spotify"

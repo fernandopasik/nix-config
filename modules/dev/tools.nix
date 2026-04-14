@@ -1,6 +1,7 @@
 {
   config,
   isDarwin,
+  isHeadless,
   isLinux,
   isWSL,
   lib,
@@ -18,13 +19,15 @@ lib.mkMerge [
   }
 
   (lib.optionalAttrs isDarwin {
-    environment.systemPackages = with pkgs; [ utm ];
+    environment.systemPackages = with pkgs; [
+      ghostty-bin
+      utm
+    ];
 
     homebrew = {
       casks = [
         # IDE
         "visual-studio-code"
-        "ghostty"
 
         # Fonts
         "font-ubuntu-mono-nerd-font"
@@ -40,6 +43,8 @@ lib.mkMerge [
       "/Applications/Ghostty.app"
     ];
   })
+
+  (lib.optionalAttrs (isLinux && isHeadless) { environment.systemPackages = with pkgs; [ ghostty ]; })
 
   (lib.optionalAttrs isWSL {
     winget.packages = [

@@ -21,6 +21,7 @@ lib.mkMerge [
     apps = [
       "ghostty"
       "vscode"
+      "apple-xcode"
     ];
   }
 
@@ -28,9 +29,6 @@ lib.mkMerge [
     environment.systemPackages = with pkgs; [ utm ];
     homebrew = {
       casks = [ "font-ubuntu-mono-nerd-font" ];
-      masApps = {
-        Xcode = 497799835;
-      };
     };
   })
 

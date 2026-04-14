@@ -14,6 +14,7 @@
     ./apple-icloud.nix
     ./apple-messages.nix
     ./apple-notes.nix
+    ./apple-xcode.nix
     ./chatgpt.nix
     ./chromium.nix
     ./claude.nix

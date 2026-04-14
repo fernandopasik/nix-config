@@ -22,6 +22,7 @@
     ./firefox.nix
     ./freetube.nix
     ./gemini.nix
+    ./ghostty.nix
     ./google-chrome.nix
     ./google-drive.nix
     ./librewolf.nix

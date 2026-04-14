@@ -18,27 +18,21 @@ lib.mkMerge [
       tree-sitter
       watchman
     ];
-
-    apps = [ "vscode" ];
+    apps = [
+      "ghostty"
+      "vscode"
+    ];
   }
 
   (lib.optionalAttrs isDarwin {
-    environment.systemPackages = with pkgs; [
-      ghostty-bin
-      utm
-    ];
-
+    environment.systemPackages = with pkgs; [ utm ];
     homebrew = {
       casks = [ "font-ubuntu-mono-nerd-font" ];
       masApps = {
         Xcode = 497799835;
       };
     };
-
-    system.defaults.dock.persistent-apps = [ "/Applications/Ghostty.app" ];
   })
-
-  (lib.optionalAttrs (isLinux && isHeadless) { environment.systemPackages = with pkgs; [ ghostty ]; })
 
   (lib.optionalAttrs isWSL { winget.packages = [ "DEVCOM.JetBrainsMonoNerdFont" ]; })
 ]

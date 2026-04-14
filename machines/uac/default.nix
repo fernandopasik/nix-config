@@ -15,7 +15,7 @@
     ../../modules/nix
     ../../modules/system
     ../../modules/shell
-    ../../modules/apps
+    ../../modules/hardware
     ../../modules/dev
     ../../modules/wsl
     ../../modules/games

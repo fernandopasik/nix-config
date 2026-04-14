@@ -15,6 +15,7 @@ in
     ../../modules/macos
     ../../modules/system
     ../../modules/shell
+    ../../modules/hardware
     ../../modules/dev
     ../../modules/dev/android.nix
     ../../users/fernando

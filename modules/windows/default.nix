@@ -56,7 +56,7 @@ in
         })
       ]
     );
-    default = [ ];
+    default = [ "Romanitho.Winget-AutoUpdate" ];
     description = "List of Winget packages to install via systemd oneshot. Each item can be a string (package ID) or an attrset with name and optional location.";
   };
 

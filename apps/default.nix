@@ -24,6 +24,7 @@
     ./librewolf.nix
     ./microsoft-edge.nix
     ./notion.nix
+    ./raspberry-pi-imager.nix
     ./signal.nix
     ./slack.nix
     ./spotify.nix

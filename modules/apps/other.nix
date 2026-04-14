@@ -8,24 +8,13 @@
   ...
 }:
 lib.mkMerge [
-  (lib.optionalAttrs isDarwin {
-    homebrew.casks = [
-      "deluge"
-      "raspberry-pi-imager"
-    ];
-  })
+  (lib.optionalAttrs isDarwin { homebrew.casks = [ "deluge" ]; })
 
-  (lib.optionalAttrs (isLinux && !isWSL) {
-    environment.systemPackages = with pkgs; [
-      deluge
-      rpi-imager
-    ];
-  })
+  (lib.optionalAttrs (isLinux && !isWSL) { environment.systemPackages = with pkgs; [ deluge ]; })
 
   (lib.optionalAttrs isWSL {
     winget.packages = [
       "DelugeTeam.Deluge"
-      "RaspberryPiFoundation.RaspberryPiImager"
       "Romanitho.Winget-AutoUpdate"
       "Rufus.Rufus"
     ];

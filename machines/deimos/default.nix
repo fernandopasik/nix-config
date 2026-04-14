@@ -39,6 +39,7 @@
     "google-drive"
     "librewolf"
     "microsoft-edge"
+    "raspberry-pi-imager"
     "signal"
     "spotify"
     "vlc"

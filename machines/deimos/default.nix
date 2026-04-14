@@ -37,6 +37,7 @@
     "firefox"
     "freetube"
     "gemini"
+    "gemini-cli"
     "google-chrome"
     "google-drive"
     "librewolf"

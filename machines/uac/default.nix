@@ -40,6 +40,7 @@
     "discord"
     "firefox"
     "freetube"
+    "gemini-cli"
     "google-chrome"
     "google-drive"
     "librewolf"

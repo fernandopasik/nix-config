@@ -39,6 +39,7 @@ in
   };
 
   apps = [
+    "1password"
     "apple-facetime"
     "apple-messages"
     "apple-notes"

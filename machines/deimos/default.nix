@@ -29,6 +29,7 @@
   };
 
   apps = [
+    "1password"
     "chatgpt"
     "claude"
     "chromium"

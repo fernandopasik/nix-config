@@ -30,6 +30,7 @@
   };
 
   apps = [
+    "1password"
     "apple-devices"
     "apple-icloud"
     "chatgpt"

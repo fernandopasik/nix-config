@@ -7,6 +7,7 @@
   };
 
   imports = [
+    ./1password.nix
     ./apple-devices.nix
     ./apple-facetime.nix
     ./apple-icloud.nix

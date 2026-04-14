@@ -11,13 +11,13 @@
     wslModule
     homeManagerModule
     ../../apps
-    ../../modules/windows
+    ../../os/windows
+    ../../os/wsl
     ../../modules/nix
     ../../modules/system
     ../../modules/shell
     ../../modules/hardware
     ../../modules/dev
-    ../../modules/wsl
     ../../modules/games
     ../../users/fernando
   ];

@@ -11,8 +11,8 @@ in
   imports = [
     homeManagerModule
     ../../apps
+    ../../os/macos
     ../../modules/nix
-    ../../modules/macos
     ../../modules/system
     ../../modules/shell
     ../../modules/hardware

@@ -1,7 +1,5 @@
 {
   config,
-  isDarwin,
-  isWSL,
   lib,
   pkgs,
   ...

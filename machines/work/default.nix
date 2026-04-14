@@ -39,6 +39,7 @@ in
   };
 
   apps = [
+    "android-studio"
     "apple-notes"
     "apple-xcode"
     "chatgpt"

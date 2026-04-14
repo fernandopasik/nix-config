@@ -32,6 +32,7 @@
   apps = [
     "1password"
     "7zip"
+    "android-studio"
     "apple-devices"
     "apple-icloud"
     "chatgpt"

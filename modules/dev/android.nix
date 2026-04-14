@@ -48,11 +48,5 @@ lib.mkMerge (
         export ANDROID_SDK_ROOT="${androidSdkPkg}/share/android-sdk"
       '';
     }
-
-    (lib.optionalAttrs isDarwin {
-      homebrew = {
-        casks = [ "android-studio" ];
-      };
-    })
   ]
 )

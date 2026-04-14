@@ -9,6 +9,7 @@
   imports = [
     ./1password.nix
     ./7zip.nix
+    ./android-studio.nix
     ./apple-devices.nix
     ./apple-facetime.nix
     ./apple-icloud.nix

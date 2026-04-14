@@ -11,6 +11,8 @@
 lib.mkMerge [
   {
     environment.systemPackages = with pkgs; [
+      claude-code
+      gemini-cli
       imagemagick
       neovim
       tree-sitter

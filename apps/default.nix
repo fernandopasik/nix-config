@@ -34,6 +34,7 @@
     ./spotify.nix
     ./teams.nix
     ./vlc.nix
+    ./vscode.nix
     ./whatsapp.nix
     ./wireshark.nix
     ./yubikey.nix

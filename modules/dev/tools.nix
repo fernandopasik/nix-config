@@ -13,9 +13,11 @@ lib.mkMerge [
     environment.systemPackages = with pkgs; [
       imagemagick
       neovim
-      watchman
       tree-sitter
+      watchman
     ];
+
+    apps = [ "vscode" ];
   }
 
   (lib.optionalAttrs isDarwin {
@@ -25,31 +27,16 @@ lib.mkMerge [
     ];
 
     homebrew = {
-      casks = [
-        # IDE
-        "visual-studio-code"
-
-        # Fonts
-        "font-ubuntu-mono-nerd-font"
-      ];
-
+      casks = [ "font-ubuntu-mono-nerd-font" ];
       masApps = {
         Xcode = 497799835;
       };
     };
 
-    system.defaults.dock.persistent-apps = [
-      "/Applications/Visual Studio Code.app"
-      "/Applications/Ghostty.app"
-    ];
+    system.defaults.dock.persistent-apps = [ "/Applications/Ghostty.app" ];
   })
 
   (lib.optionalAttrs (isLinux && isHeadless) { environment.systemPackages = with pkgs; [ ghostty ]; })
 
-  (lib.optionalAttrs isWSL {
-    winget.packages = [
-      "Microsoft.VisualStudioCode"
-      "DEVCOM.JetBrainsMonoNerdFont"
-    ];
-  })
+  (lib.optionalAttrs isWSL { winget.packages = [ "DEVCOM.JetBrainsMonoNerdFont" ]; })
 ]

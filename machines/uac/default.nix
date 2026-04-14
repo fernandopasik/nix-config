@@ -31,11 +31,13 @@
 
   apps = [
     "1password"
+    "7zip"
     "apple-devices"
     "apple-icloud"
     "chatgpt"
     "claude"
     "chromium"
+    "deluge"
     "discord"
     "firefox"
     "freetube"
@@ -45,6 +47,7 @@
     "microsoft-edge"
     "nordvpn"
     "raspberry-pi-imager"
+    "rufus"
     "signal"
     "spotify"
     "vlc"

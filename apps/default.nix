@@ -8,6 +8,7 @@
 
   imports = [
     ./1password.nix
+    ./7zip.nix
     ./apple-devices.nix
     ./apple-facetime.nix
     ./apple-icloud.nix
@@ -16,6 +17,7 @@
     ./chatgpt.nix
     ./chromium.nix
     ./claude.nix
+    ./deluge.nix
     ./discord.nix
     ./firefox.nix
     ./freetube.nix
@@ -27,6 +29,7 @@
     ./nordvpn.nix
     ./notion.nix
     ./raspberry-pi-imager.nix
+    ./rufus.nix
     ./signal.nix
     ./slack.nix
     ./spotify.nix

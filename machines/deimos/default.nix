@@ -33,6 +33,7 @@
     "chatgpt"
     "claude"
     "chromium"
+    "deluge"
     "firefox"
     "freetube"
     "gemini"

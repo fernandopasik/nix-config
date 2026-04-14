@@ -29,6 +29,7 @@
       # compression tools
       bzip2
       xz
+      unar
       zlib
       zstd
 

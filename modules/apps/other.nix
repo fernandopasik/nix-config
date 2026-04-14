@@ -7,16 +7,4 @@
   lib,
   ...
 }:
-lib.mkMerge [
-  (lib.optionalAttrs isDarwin { homebrew.casks = [ "deluge" ]; })
-
-  (lib.optionalAttrs (isLinux && !isWSL) { environment.systemPackages = with pkgs; [ deluge ]; })
-
-  (lib.optionalAttrs isWSL {
-    winget.packages = [
-      "DelugeTeam.Deluge"
-      "Romanitho.Winget-AutoUpdate"
-      "Rufus.Rufus"
-    ];
-  })
-]
+lib.mkMerge [ (lib.optionalAttrs isWSL { winget.packages = [ "Romanitho.Winget-AutoUpdate" ]; }) ]

@@ -19,9 +19,7 @@ lib.mkMerge [
     ];
   }
   (lib.optionalAttrs isDarwin {
-    homebrew = {
-      brews = [ "jenv" ];
-    };
+    homebrew.brews = [ "jenv" ];
 
     programs.zsh.promptInit = ''
       export PATH="$HOME/.jenv/shims:$PATH"

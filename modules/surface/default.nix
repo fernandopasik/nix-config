@@ -28,7 +28,7 @@ in
         "sd_mod"
       ];
       kernelModules = [ ];
-      prepend = [ "${acpiOverride}/acpi_override" ];
+      # prepend = [ "${acpiOverride}/acpi_override" ];
     };
     kernelModules = [ "kvm-intel" ];
     kernelParams = [ "mem_sleep_default=deep" ];

@@ -16,6 +16,7 @@
     ./chatgpt.nix
     ./chromium.nix
     ./claude.nix
+    ./claude-code.nix
     ./discord.nix
     ./firefox.nix
     ./freetube.nix

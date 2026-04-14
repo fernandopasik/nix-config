@@ -10,7 +10,6 @@
 lib.mkMerge [
   {
     environment.systemPackages = with pkgs; [
-      claude-code
       imagemagick
       neovim
       watchman

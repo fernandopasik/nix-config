@@ -32,6 +32,7 @@
     "1password"
     "chatgpt"
     "claude"
+    "claude-code"
     "chromium"
     "firefox"
     "freetube"

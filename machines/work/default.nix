@@ -42,6 +42,7 @@ in
     "apple-notes"
     "chatgpt"
     "claude"
+    "claude-code"
     "firefox"
     "gemini"
     "google-chrome"

@@ -35,6 +35,7 @@
     "apple-icloud"
     "chatgpt"
     "claude"
+    "claude-code"
     "chromium"
     "discord"
     "firefox"

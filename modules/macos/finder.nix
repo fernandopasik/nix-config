@@ -1,15 +1,5 @@
 { config, pkgs, ... }:
 {
-  homebrew.casks = [
-    # QuickLook plugins
-    "qlcolorcode"
-    "qlmarkdown"
-    "qlstephen"
-    "quicklook-csv"
-    "quicklook-json"
-    "webpquicklook"
-  ];
-
   system = {
     defaults = {
       CustomUserPreferences = {

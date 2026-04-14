@@ -40,6 +40,7 @@ in
 
   apps = [
     "apple-notes"
+    "apple-xcode"
     "chatgpt"
     "claude"
     "firefox"

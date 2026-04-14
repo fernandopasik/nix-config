@@ -21,7 +21,6 @@ lib.mkMerge [
     apps = [
       "ghostty"
       "vscode"
-      "apple-xcode"
     ];
   }
 

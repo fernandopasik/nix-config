@@ -8,7 +8,7 @@
 {
   boot = {
     kernel.sysctl = {
-      "vm.mmap_rnd_bits" = lib.mkForce 32;
+      "vm.mmap_rnd_bits" = lib.mkForce 18;
     };
     kernelPackages = pkgs.linuxPackages_rpi4;
     loader = {

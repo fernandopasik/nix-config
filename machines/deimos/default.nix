@@ -9,10 +9,10 @@
   imports = [
     homeManagerModule
     ../../apps
+    ../../hardware/surface
     ../../os/linux
     ../../os/linux/gnome.nix
     ../../modules/nix
-    ../../modules/surface
     ../../modules/system
     ../../modules/shell
     ../../modules/dev

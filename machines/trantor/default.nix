@@ -9,9 +9,9 @@
   imports = [
     homeManagerModule
     ../../apps
+    ../../hardware/raspberrypi
     ../../os/linux
     ../../modules/nix
-    ../../modules/raspberrypi
     ../../modules/system
     ../../modules/shell
     ../../modules/dev/docker.nix

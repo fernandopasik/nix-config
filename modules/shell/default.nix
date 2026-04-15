@@ -15,6 +15,18 @@
     starship
   ];
 
+  environment.etc."starship.toml" = {
+    text = ''
+      "$schema" = 'https://starship.rs/config-schema.json'
+
+      add_newline = true
+
+      [character]
+      success_symbol = '[➜](bold green)'
+    '';
+    mode = "0644";
+  };
+
   users = lib.optionalAttrs isLinux { defaultUserShell = pkgs.zsh; };
 
   programs.zsh = lib.mkMerge [
@@ -39,7 +51,7 @@
       '';
 
       promptInit = ''
-        export STARSHIP_CONFIG=$HOME/.config/starship.toml
+        export STARSHIP_CONFIG=/etc/starship.toml
         eval "$(starship init zsh)"
       '';
     }

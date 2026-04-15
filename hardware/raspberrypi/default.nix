@@ -1,13 +1,20 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   boot = {
+    kernel.sysctl = {
+      "vm.mmap_rnd_bits" = lib.mkForce 32;
+    };
+    kernelPackages = pkgs.linuxPackages_rpi4;
     loader = {
       grub.enable = false;
       generic-extlinux-compatible.enable = true;
     };
-
-    kernelPackages = pkgs.linuxPackages_rpi4;
   };
 
   environment.systemPackages = with pkgs; [

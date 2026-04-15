@@ -36,5 +36,5 @@
     ];
   };
 
-  system.stateVersion = if isDarwin then 6 else "25.05";
+  system.stateVersion = if isDarwin then 6 else "25.11";
 }

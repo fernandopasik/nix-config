@@ -11,7 +11,6 @@
     ../../apps
     ../../hardware/surface
     ../../os/linux
-    ../../os/linux/gnome.nix
     ../../modules/nix
     ../../modules/system
     ../../modules/shell

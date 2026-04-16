@@ -1,8 +1,14 @@
-{ config, pkgs, ... }:
+{
+  config,
+  isDarwin,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   services.ollama = {
     enable = true;
-    acceleration = "cuda";
+    acceleration = lib.mkIf (!isDarwin) "cuda";
   };
 }

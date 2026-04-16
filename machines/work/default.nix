@@ -18,6 +18,7 @@ in
     ../../modules/hardware
     ../../modules/dev
     ../../modules/dev/android.nix
+    ../../services/ollama.nix
     ../../users/fernando
   ];
 

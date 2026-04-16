@@ -15,17 +15,25 @@
     starship
   ];
 
-  environment.etc."starship.toml" = {
-    text = ''
-      "$schema" = 'https://starship.rs/config-schema.json'
+  environment.etc."starship.toml" = lib.mkMerge [
+    {
+      text = ''
+        "$schema" = 'https://starship.rs/config-schema.json'
 
-      add_newline = true
+        add_newline = true
 
-      [character]
-      success_symbol = '[➜](bold green)'
-    '';
-    mode = "0644";
-  };
+        [character]
+        success_symbol = '[➜](bold green)'
+      '';
+    }
+    (lib.optionalAttrs (!isDarwin) { mode = "0644"; })
+  ];
+
+  system.activationScripts.extraActivation.text = ''
+    if [ -e /etc/starship.toml ]; then
+      chmod -h 644 /etc/starship.toml || true
+    fi
+  '';
 
   users = lib.optionalAttrs isLinux { defaultUserShell = pkgs.zsh; };
 

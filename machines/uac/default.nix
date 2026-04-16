@@ -20,6 +20,7 @@
     ../../modules/hardware
     ../../modules/dev
     ../../modules/games
+    ../../services/ollama.nix
     ../../users/fernando
   ];
 

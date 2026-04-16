@@ -13,6 +13,7 @@
     ../../apps
     ../../os/windows
     ../../os/wsl
+    ../../hardware/nvidia
     ../../modules/nix
     ../../modules/system
     ../../modules/shell

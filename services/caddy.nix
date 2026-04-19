@@ -11,6 +11,16 @@
 
   services.caddy = {
     enable = true;
-    virtualHosts = { };
+    virtualHosts."http://:80" = {
+      extraConfig = ''
+        respond "hello"
+      '';
+    };
+    virtualHosts."https://:443" = {
+      extraConfig = ''
+        tls internal
+        respond "hello"
+      '';
+    };
   };
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   security.acme = {
@@ -9,6 +9,4 @@
       dnsResolver = "1.1.1.1:53";
     };
   };
-
-  environment.systemPackages = with pkgs; [ nssTools ];
 }

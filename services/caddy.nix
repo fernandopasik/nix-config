@@ -1,6 +1,8 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [ nssTools ];
+
   networking.firewall = {
     allowedTCPPorts = [
       80
@@ -23,4 +25,6 @@
       '';
     };
   };
+
+  systemd.services.caddy.path = with pkgs; [ nssTools ];
 }

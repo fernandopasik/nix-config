@@ -10,5 +10,5 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ nss ];
+  environment.systemPackages = with pkgs; [ nssTools ];
 }
